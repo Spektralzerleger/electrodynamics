@@ -1,0 +1,26 @@
+%Seminarvortrag Eugen & Mathieu
+\documentclass[DIV=14]{scrartcl}
+
+\input{metadata/preamble}
+\input{metadata/defs}
+
+\begin{document}
+\maketitle
+\input{content/abstract}
+\tableofcontents
+\newpage
+
+%Aufteilung noch offen, so kann jeder separat an seinem Teil arbeiten
+\include{content/eugen}
+\include{content/mathieu}
+
+\appendix
+
+\nocite*
+\bibliographystyle{plaindin}
+\bibliography{bibliography/electrodynamics-bib}
+
+%Falls wir irgendwelche Schaubilder verwenden 
+%\listoffigures
+
+\end{document}
