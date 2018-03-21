@@ -1,0 +1,40 @@
+\section{Lagrange-Formulierung der Elektrodynamik}
+\subsection{Lagrangedichte für eine Feldtheorie}
+Wir wollen das Problem nun auf eine überabzählbare Anzahl an Freiheitsgraden erweiern. Wir betrachten hierzu die \textbf{Lagrangedichte} \  $\text{L}=\iiint \dd[3]{x}  \lagr$. \\
+Das Wirkungsintegral ist nun $\text{I}=\int_{t_1}^{t_2} \dd{t} \iiint \dd[3]{x}  \lagr = \int \dd[4]{x} \lagr$. \\
+Nun erhalten wir die Bewegungsgleichungen aus dem Hamiltonschen Prinzip. Dazu nehmen wir an, dass die Variation der Felder auf den Hyperflächen $t=t_1$ und $t=t_2$ verschwindet.
+\begin{align*}
+0 = \delta I &= \int \dd[4]{x} \left( \dphi \delta\varphi^{(i)} + \ddphi \delta(\partial_{\mu}\varphi^{(i)}) \right) \\
+ 				 &= \int \dd[4]{x} \left(\dphi - \partial_{\mu} \ddphi \right) \delta\varphi^{(i)}
+\end{align*}
+Wir erhalten daraus:
+\begin{mybox}{Euler-Lagrange-Gleichung}
+
+\begin{align}
+0=\dphi - \partial_{\mu} \ddphi
+\end{align}
+
+\end{mybox}
+
+\subsection{Lagrangedichte für das Maxwell-Feld}
+Wir wollen $\lagr$ \ so wählen, dass sie ein Skalar ist, von den Feldern sowie deren Ableitungen abhängt, Strom/Ladung als Quelle hat und die Maxwell-Gleichungen als Bewegungsgleichungen liefert:
+\begin{align}
+\partial_{\mu}\fup = j^{\nu} \qquad  \Longleftrightarrow \qquad \Box A^{\nu} - \partial^{\nu}(\partial_{\mu}A^{\mu}) = j^{\nu}
+\end{align}
+Da wir als Bewegungsgleichungen Differentialgleichungen 2. Ordnung erwarten, bietet es sich an, das 4er-Feld $A^{\mu}$ wie folgt anzusetzen:
+\begin{align*}
+\lagr = \text{a} \cdot \partial_{\mu}A^{\nu}\partial^{\mu}A_{\nu} + \text{b} \cdot \partial_{\mu}A^{\nu}\partial_{\nu}A^{\mu} + \text{c} \cdot (\partial_{\mu}A^{\mu})^2 + \text{d} \cdot A_{\mu}A^{\mu} + \text{e} \cdot A_{\mu}j^{\mu}
+\end{align*}
+Setzt man dies in (1) ein und wählt die Koeffizienten so, dass (2) herauskommt, findet man:
+\begin{align*}
+\lagr = -\frac{1}{4} \fd \fu - j_{\mu}A^{\mu} + \frac{\text{c}}{2} \underbrace{\left[ (\partial_{\mu}A^{\mu})^2 - \partial_{\mu}A^{\nu}\partial_{\nu}A^{\mu} \right]}_{= \partial_{\mu}(A^{\mu}\partial_{\varrho}A^{\varrho}-A_{\nu}\partial^{\nu}A^{\mu})}
+\end{align*}
+Da der letzte Term sich als Divergenz schreiben lässt, ist er nur ein Randterm und verschwindet bei der Variation. Er ändert somit nichts an den Bewegungsgleichungen! \\ 
+Es folgt also:
+\begin{mybox}{Lagrangedichte}
+\begin{align}
+\lagr = -\frac{1}{4} \fd \fu - j_{\mu}A^{\mu}
+\end{align}
+\end{mybox}
+\phantom{.} \\
+Die Lagrangedichte hat demnach die richtige Dimension $\left[\sfrac{\text{Energie}}{\text{Volumen}}\right]$ wobei der erste Term einer "kinetischen Energie" und der Zweite einer "potentiellen Energie" entspricht.
