@@ -8,4 +8,4 @@ This repository contains all the work related to the preparation of a talk/short
 
 - [ ] summary of our talk (handwritten & LaTeX version)
 
-© Mathieu Kaltschmidt (@mathieukaltschmidt) & Eugen Dizer
+© Mathieu Kaltschmidt [(@mathieukaltschmidt)](https://github.com/mathieukaltschmidt) & Eugen Dizer [(@spektralzerleger)](https://github.com/spektralzerleger).
