@@ -37,14 +37,17 @@ Es folgt also:
 \end{align}
 \end{mybox}
 \phantom{.} \\
-Die Lagrangedichte hat demnach die richtige Dimension $\left[\sfrac{\text{Energie}}{\text{Volumen}}\right]$ wobei der erste Term einer "kinetischen Energie" und der Zweite einer "potentiellen Energie" entspricht.
+Die Lagrangedichte hat demnach die richtige Dimension $\left[\sfrac{\text{Energie}}{\text{Volumen}}\right]$ wobei der erste Term einer "kinetischen Energie" und der Zweite einer "potentiellen Energie" entspricht. \\
 
 Andererseits kann man die Lagrangedichte auch ohne Kenntnis der Maxwell-Gleichungen herleiten. \\
-Wir wissen, dass die Elektrodynamik eine relativistische Theorie ist und die Bewegungsgleichungen daher invariant unter Lorentz-Transformationen sein sollten. Außerdem gilt das Superpositionsprinzip, d.h. Summen von Lösungen der Bewegungsgleichungen sind wieder Lösungen. deshalb sollten die Bewegungsgleichungen linear sein, der Lagrangian also höchstens quadratisch in den Ableitungen der Feldkomponenten sein. Zuletzt sollen die Bewegungsgleichungen eichinvariant sein.
+Wir wissen, dass die Elektrodynamik eine relativistische Theorie ist und die Bewegungsgleichungen daher invariant unter Lorentz-Transformationen sein sollten. Außerdem gilt das Superpositionsprinzip, d.h. Summen von Lösungen der Bewegungsgleichungen sind wieder Lösungen. deshalb sollten die Bewegungsgleichungen linear sein, der Lagrangian also höchstens quadratisch in den Ableitungen der Feldkomponenten sein. \\ 
+Zuletzt sollen die Bewegungsgleichungen eichinvariant sein.
 Aus den obigen Überlegungen ergeben sich folgende Forderungen an den Lagrangian: \\
-1. Lorentzinvarianz \\
-2. Eichinvarianz  \\
-3. Höchstens quadratisch in den Ableitungen \\
+\begin{enumerate}
+	\item Lorentzinvarianz
+	\item Eichinvarianz 
+	\item  Höchstens quadratisch in den Ableitungen
+\end{enumerate}
 
 Aus der ersten Forderung folgt, dass die Lagrangedichte ein Lorentz-Skalar sein muss. Aus der Eichinvarianz folgt, dass die Lagrangedichte $\fd$ oder sein Pendant $\star \fd$ enthalten kann, denn unter einer Eichtransformation $A^{\mu} \rightarrow A^{\mu} + \partial^{\mu} \phi$ ändert sich der Feldstärketensor nicht:
 
@@ -61,8 +64,6 @@ Da $\fd$ spurfrei ist, sind die ersten Skalare, die nur quadratisch von den Able
 
 Betrachtet man diese beiden Skalare ausführlicher, fällt auf, dass der Zweite sein Vorzeichen unter Raumspiegelung ändert. Solche paritätsverletzenden Effekte wurden bisher nicht beobachtet, weshalb dieser als Kandidat rausfällt. Da wir höchstens quadratische Abhängigkeiten in den Ableitungen zulassen wollen, haben wir diese mit $\fd \fu$ gefunden. Mehr Kombinationen, sodass es eichinvariant bleibt, gibt es nicht. Betrachten wir also noch die reinen Feldanteile: \\
 
-Am einfachsten wäre $A_{\mu} A^{\mu}$. Dies entspricht aber einem Massenterm, der dazu führen würde, dass die Felder schneller als $1/r$ abfallen würden. Deshalb bleibt noch der Lorentz-Skalar $j_{\mu} A^{\mu}$, der mit der Kontinuitätsgleichung $\partial_{\mu} j^{\mu} = 0$ eichinvariant ist. Da es die Symmetrie der Natur verletzen würde, dürfen die Raumzeitkoordinten $x^{\mu}$ nicht explizit vorkommen. \\
+Am einfachsten wäre $A_{\mu} A^{\mu}$. Dies entspricht aber einem Massenterm, der dazu führen würde, dass die Felder schneller als $\sfrac{1}/{r{}$ abfallen würden. Deshalb bleibt noch der Lorentz-Skalar $j_{\mu} A^{\mu}$, der mit der Kontinuitätsgleichung $\partial_{\mu} j^{\mu} = 0$ eichinvariant ist. Da es die Symmetrie der Natur verletzen würde, dürfen die Raumzeitkoordinten $x^{\mu}$ nicht explizit vorkommen. \\
 
-Die drei Forderungen fixieren die Lagrangedichte auf $\lagr = a \cdot \fd \fu + b \cdot j_{\mu} A^{\mu}$. \\
-
-...?
+Die drei Forderungen fixieren die Lagrangedichte demnach auf $\lagr = a \cdot \fd \fu + b \cdot j_{\mu} A^{\mu}$. 
