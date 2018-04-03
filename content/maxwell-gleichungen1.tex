@@ -1,0 +1,100 @@
+\subsection{homogene Maxwell-Gleichungen}
+Wir wollen zunächst einmal die beiden homogenen Maxwell-Gleichungen umformulieren. \\
+Dazu nehmen wir einen allgemeinen Standpunkt ein und müssen das elektrische und das magnetische Feld als Vektorfelder ind der 4D-Raumzeit auffassen. Wir arbeiten nachfolgend in der Minkowski-Raumzeit in den Standard-Raumzeit-Koordinaten $x^{\mu}$. \\
+Zunächst einmal bemerken wir, dass sich die äußere Ableitung einer 1-Form in einen Raumanteil und einen Zeitanteil aufteilen lässt:
+
+\begin{align}
+\dd \omega &= \partial_0 \omega_I \dd x^0 \w \dd x^{I} + \partial_i \omega_I \dd x^i \w \dd x^{I} \\
+&= \dd t \w \partial_t \omega + \dd_s \omega 
+\end{align}
+
+wobei I über alle Multi-Indizes läuft. \\
+Betrachtet man die Gleichungen (1) und (2), so fällt auf, dass es sinnvoll erscheint das E-Feld als 1-Form sowie das B-Feld als 2-Form zu schreiben:
+
+\begin{align}
+E &= E_x \dd x +E_y \dd y + E_z \dd z   \\
+B &= B_x \dd y \w \dd z + B_y \dd z \w \dd x + B_z \dd x \w \dd y 
+\end{align}
+
+Damit lassen sich (1) und (2) schreiben als:
+
+\begin{align}
+\dd_s B &= 0 \\
+\partial_t B + \dd_s E &=0
+\end{align}
+
+Wir wollen diese beiden Gleichungen zusammenfassen, indem wir für das elektromagnetische Feld die 2-Form $F$ im $\mathbb{R}^4$ einführen:
+
+\begin{align}  
+F= \dd t \w E -B 
+\end{align} \todo{passen die Vorzeichen?}
+
+denn dann haben wir:
+
+\begin{align}
+\dd F &= - \dd t \w \dd E - \dd B \notag \\
+		&= - \dd t \w (\dd_s E + \dd t \w \partial_t E ) - \dd_s B - \dd t \w \partial_t B \notag \\
+		&= -\dd t \w (\dd_s E + \partial_t B) - \dd_s B
+\end{align}
+
+Damit lassen sich beide homogenen Maxwell-Gleichungen kurz zu: 
+
+\begin{align}
+\dd F = 0
+\end{align}
+
+zusammenfassen. \\
+In Komponentenschreibweise gilt für das elektromagnetische Feld
+
+\begin{align}
+F = \frac{1}{2} \fd \dd x^{\mu} \w \dd x^{\nu}
+\end{align}
+
+mit dem Feldstärke-Tensor:
+\begin{align}
+\fd =
+\begin{pmatrix}
+\phantom{-}0 & \phantom{-}E_x & \phantom{-}E_y & \phantom{-}E_z \\
+-E_x & \phantom{-}0 & -B_z & \phantom{-}B_y \\
+-E_y & \phantom{-}B_z & \phantom{-}0 & -B_x \\
+-E_z & -B_y & \phantom{-}B_x \phantom{-}& 0
+\end{pmatrix}
+\end{align}
+
+Da die äußere Ableitung koordinatenunabhängig ist, gilt $\dd F = 0$ auf jeder beliebigen Mannigfaltigkeit und hängt nicht von der Wahl der Koordinaten ab. \\
+Die 2-Form $F$ ist demnach geschlossen und besitzt nach dem \bfseries Poincaré-Lemma \normalfont ein Potential:
+
+\begin{align}
+F = \dd A 
+\end{align}
+
+wobei A eine 1-Form ist. \\
+Damit gilt automatisch $ \dd F = \dd (\dd A) = 0$. Außerdem sehen wir, dass wir eine Eichfreiheit haben:
+
+\begin{align}
+A \quad \rightarrow \quad A + \dd \lambda \qquad\qquad \lambda \in C^{\infty}(\mathbb{R}^4)
+\end{align}.
+
+Mit Hilfe dieses Potentials lassen sich die Felder wie folgt darstelllen:
+
+\begin{align}
+E &= -\partial_t A \\
+B &= \dd_s A
+\end{align}
+
+Betrachten wir nun noch die beiden inhomogenen Gleichungen (3) und (4), die jeweils noch Quellterme enthalten. Es fällt auf, dass $E$ und $B$ gewissermaßen ihre Rollen tauschen. Dieses Phänomen wird als \bfseries elektromagnetische Dualität \normalfont bezeichnet.
+
+Auf Grundlage dieser Dualität, welche durch die Transformationen der Felder gemäß
+\begin{align*}
+E \rightarrow B \qquad \text{sowie} \qquad B \rightarrow -E
+\end{align*}
+
+die Invarianz der Maxwell-Gleichungen im Vakuum charakterisiert, wollen wir nun eine neue Methode, genauer einen neuen Operator einführen der uns diese Transformationen ermöglicht. \\
+Wir erinnern uns an die neue Darstellung der Felder nach Gl. (\todo{richtige Nummer}) und (\todo{richtige Nummer}):
+
+\begin{align*}
+E &= E_x \dd x +E_y \dd y + E_z \dd z   \\
+B &= B_x \dd y \w \dd z + B_y \dd z \w \dd x + B_z \dd x \w \dd y 
+\end{align*}
+
+Für die Transformation müssen wir also eine 1-Form in eine 2-Form überführen und umgekehrt. Im $\mathbb{R}^3$ kann diese Transformation mit dem \bfseries Hodge-Stern-Operator \normalfont realisiert werden.

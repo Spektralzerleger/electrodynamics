@@ -1,1 +1,81 @@
 \subsection{Hodge-Stern-Operator}
+Der Hodge-Stern-Operator ist eine der drei Standard-Operation auf dem Raum der Differentialformen. \\
+Wir betrachten die Abbildung:
+\begin{align*}
+\star : \Lambda^p(V*) \quad \rightarrow \quad  \Lambda^{(n-p)}(V*) 
+\end{align*}
+
+Die abstrakte Definition des Operators lautet: \todo{Hier mal noch die Definition überprüfen}
+
+\begin{align}
+\alpha \w \star \beta = g(\alpha,\beta) \omega 
+\end{align}
+ 
+ für alle  $\alpha, \beta \in \Lambda^p V$ und  $\omega \in \Lambda^n V $.\\
+ Die Metrik g definiert sich für die geordnete Orthonormalbasis {$\sigma^{i} \in V. i=1,\dots,n$} wie folgt:
+
+ \begin{align}
+g(\alpha,\beta) = \text{det}\left( g(\alpha^{i}, \beta^{i})\right) \text{mit } g(\sigma^{i},\sigma^{j}) = \pm \delta^{ij}
+ \end{align}
+  für alle "einfachen" p-Vektoren $\alpha$ und $\beta$. \\
+Im Allgemeinen gilt:
+ \begin{align}
+ g(\omega,\omega) = \prod_{k=1}^{n} g(\sigma^{i},\sigma^{i}) = (-1)^s
+ \end{align}
+ mit der Signatur $s$, welche sich aus der Anzahl an Minuszeichen bei der Betrachtung der Metrik ergibt und die Norm des Vektors festlegt. \\
+ In unserem Fall bietet sich die nachfolgende, etwas weniger abstrakte, praktische Definition an. \\
+ Wir betrachten einen Basis-p-Vektor $\alpha$ der Form:
+ 
+ \begin{align}
+ \alpha= \sigma^{1} \w \sigma^{2} \w \dots \w \sigma^{p} = \sigma^{I} \in \Lambda^p V
+ \end{align}
+ 
+ Einsetzen von $\sigma^{J} \in \Lambda^{(n-p)}V$ in die abstrakte Definition liefert:
+ 
+
+\begin{align}
+\sigma^{J} \w \star \alpha= g(\sigma^{j},\alpha) \omega 
+\end{align}
+
+Daraus folgt direkt: \quad $\star\alpha = \text{const.} \cdot \sigma^{p+1} \w \dots \w \sigma^{n}$ \\
+und mit $\sigma^{J} \w\star\alpha = \omega$: \quad  $1 =  g(\sigma^{j},\text{const.} \cdot \sigma^{j})$, \\
+was uns schließlich zum Ausdruck:
+\begin{align*}
+\text{const.}= \frac{(-1)^s}{g(\sigma^j,\sigma^j)} = \frac{g(\omega,\omega)}{g(\sigma^j,\sigma^j)} = g(\alpha,\alpha)
+\end{align*}
+führt. \\
+Alles zusammen ergibt uns die recht anschauliche Definition:
+\begin{mybox}{Hodge-Stern-Operator}
+\begin{align}
+\star(\sigma^1 \w \sigma^2 \w \dots \w \sigma^p) = g(\sigma^1,\sigma^1)\dots g(\sigma^p,\sigma^p) \sigma^{p+1}\w \dots \w \sigma^n
+\end{align}
+\end{mybox}
+
+Für die zweifache Anwendung des Operators gilt: (ohne Herleitung)
+\begin{align}
+\star \star = (-1)^{p(n-p)+s}
+\end{align}
+
+\subsubsection{Anwendungsbeispiel: 4D-Minkowski-Raumzeit}
+
+Wir betrachten den trivialen 4er-Vektor:
+
+\begin{align*}
+\omega = - \dd t \w \dd x\w \dd y \w \dd z
+\end{align*}
+
+Wenden wir nun den $\star$-Operator an folgt zum Beispiel:
+
+\begin{itemize}
+\begin{align*}
+\item \star 1 &= \omega \\
+\item \star \omega &= -1 \\
+\item  \star \dd t &= - \dd x \w \dd y \w \dd z \\
+\item \star \dd x \w \dd y \w \dd z &= - \dd t \\
+\item \star\star \omega &= (-1)^{4(4-4)+1} \omga = -\omega \\
+\item \dots
+\end{align*}
+\end{itemize}
+
+Wörtlich gesprochen liefert uns der Hodge-Stern-Operator die duale (n-p)-Form  zur p-Form durch "wedgen" der übrigen Basis-1-Formen, die nicht in der p-Form auftreten, unter Berücksichtigung der Geometrie des Raumes. \\
+Dies wollen wir nutzen, um nun die inhomogenen Maxwell-Gleichungen neu auszuformulieren.

@@ -1,0 +1,37 @@
+\subsection{inhomogene Maxwell-Gleichungen}
+Durch Anwenden des Hodge-Stern-Operators auf $F$ folgt:
+
+\begin{align}
+\star F = - \star E + \star B \w \dd t 
+\end{align}
+
+und damit:
+
+\begin{align}
+\dd \star F &= - \star \partial_t E  \w \dd t - \dd_s \star E + \dd_s \star B \w \dd t \notag \\
+				&= - \dd_s \star E + (\dd_s \star B - \star \partial_t E) \w \dd t 
+\end{align}
+
+Vergleicht man dies mit den Maxwell-Gleichungen fällt auf, dass:
+
+\begin{align}
+\star \dd_s \star E &= \varrho \qquad\qquad,\varrho=\text{Ladungsdichte} \\
+\star \dd_s\star B - \partial_t E &= j \qquad\qquad ,j=j_x \dd x + j_y \dd y + j_z \dd z
+\end{align}
+
+Definiert man den Strom $J=j - \varrho \  \dd t$, lassen sich (\todo{richtige Nummer}) und (\todo{richtige Nummer}) in 
+
+\begin{align}
+\dd \star F = \star J
+\end{align}
+
+zusammenfassen. \\
+
+Insgesamt lässt sich also die gesamte Elektrodynamik auf die beiden gefundenden, äußerst eleganten Gleichungen zurückführen.
+
+\begin{mybox}{Maxwell-Gleichungen}
+\begin{align*}
+\dd F &= 0 \\
+\dd \star F &= \star J
+\end{align*}
+\end{mybox}
