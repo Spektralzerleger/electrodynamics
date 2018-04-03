@@ -1,5 +1,41 @@
 \subsection{Differentialformen}
 Differentialformen ermöglichen es uns die Diskussion der Felder auf beliebige Dimensionen zu erweitern. Es wird auffallen, dass sich die bekannten Differentialoperatoren Gradient, Divergenz und Rotation lediglich als verschiedene Darstellungen des selben Operators auf bestimmten Mannigfaltigkeiten bilden lassen. \\
-Sei V ein Vektorraum. Wir wollen zwei Vektoren aus V irgendwie miteinander multiplizieren können, sodass die grundlegende Eigenschaft des Kreuzproduktes erfüllt ist. \\
-Dieses Produkt nennen wir das \bfseries äußere Produkt \normalfont $\w$. Eine alternative, häufig verwendete Bezeichnung ist \bfseries wedge-Produkt. \normalfont
+Sei $V$ ein Vektorraum. Wir wollen zwei Vektoren aus $V$ irgendwie miteinander multiplizieren können, sodass die grundlegende Eigenschaft des Kreuzproduktes erfüllt ist. \\
+Dieses Produkt nennen wir das \bfseries äußere Produkt $\w$ \normalfont. Eine alternative, häufig verwendete Bezeichnung ist \bfseries wedge-Produkt. \normalfont
 Wir definieren: \\
+Die äußere Algebra über $V$, bezeichnet mit $\Lambda V$, ist die von $V$ induzierte Algebra mit der Relation
+\begin{align}
+v \w w = -w \w v
+\end{align}
+für alle $v,w \in V$. \\
+Wir definieren $\Lambda^p V$ als den Untervektorraum von $\Lambda V$, bestehend aus Linearkombinationen des p-fachen Produkts von Vektoren in $V$, beispielsweise $v_1 \w \dots \w v_p$. \\
+Es gilt $\Lambda^0 V = \mathbb{R}$ sowie $\Lambda^1 V = V$. Das wedge-Produkt zweier Vektoren liegt im $\Lambda^2 V$. \\
+Wir ersetzen nun die reellen Zahlen durch glatte Funktionen $C^{\infty}(\mathcal{M})$ auf einer Mannigfaltigkeit $\mathcal{M}$ und wählen den Raum der 1-Formen $\Omega^1(\mathcal{M})$ als unseren Vektorraum $V$. Kurz zusammengefasst bedeutet das:
+\begin{mybox}{Differentialformen}
+Differentialformen auf $\mathcal{M}$ sind also die äußere Algebra, induziert von $\Omega^1(\mathcal{M})$, mit der Relation 
+\begin{align*}
+\omega \w \mu = -\mu \w \omega 
+\end{align*} 
+für alle $\omega, \mu \in \Omega^1(\mathcal{M})$ und werden mit $\Omega(\mathcal{M})$ bezeichnet.
+\end{mybox}
+Den Unterraum der p-Formen bezeichnen wir mit $\Omega^p(\mathcal{M})$. \\
+Die sogenannte \bfseries äußere Ableitung $\dd$ \normalfont definieren wir über die Abbildung:
+\begin{align*}
+\dd: \Omega^p(\mathcal{M}) \quad \rightarrow \quad  \Omega^{p+1}(\mathcal{M})
+\end{align*}
+\centering mit
+\begin{enumerate}
+\item $\dd(\omega + \mu) = \dd\omega + \dd\mu \quad \text{und} \quad \dd(c\cdot\omega) = c\cdot\dd\omega \quad \forall \omega, \mu \in \Omega(\mathcal{M}) \ \text{und} \ c \in \mathbb{R} $
+\item $\dd(\omega \w \mu) = \dd \omega \w \mu + (-1)^p \omega \w \dd\mu \quad \forall \omega \in \Omega^p(\mathcal{M}) \ \text{und} \ \mu \in \Omega(\mathcal{M})$
+\item $\dd(\dd \omega) = 0 \quad \forall \omega \in \Omega(\mathcal{M}) $
+\end{enumerate}
+\flushleft
+Schränkt man sich auf den $\mathbb{R}^3$ ein, fallen interessante Eigenschaften auf:
+\begin{itemize}
+\bfseries
+\item Gradient $\dd: \Omega^0(\mathbb{R}^3) \quad \rightarrow \quad  \Omega^1(\mathbb{R}^3)$
+\item Rotation $\dd: \Omega^1(\mathbb{R}^3) \quad \rightarrow \quad  \Omega^2(\mathbb{R}^3)$
+\item Divergenz $\dd: \Omega^2(\mathbb{R}^3) \quad \rightarrow \quad  \Omega^3(\mathbb{R}^3)$
+\end{itemize}
+\normalfont
+Die Rotation ist also nichts anderes als die äußere Ableitung angewandt auf eine 1-Form im $\mathbb{R}^3.$
