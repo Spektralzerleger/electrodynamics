@@ -12,11 +12,11 @@ Die Lagrangians setzt man meistens axiomatisch an und zeigt dann, dass sie die g
 
 wobei $F$, $A$ und $J$ gemäß den obigen Definitionen gegeben sind. Es gelte $F = \dd A$. \\
 
-Das zugehörige Wirkungsfunktional sei $\text{I[A]}=\int \lagr$ und sei $A + \varepsilon \cdot \delta A$ das gestörte Eichpotential. \\
+Das zugehörige Wirkungsfunktional sei $\mathcal{S} \text{[A]}=\int \lagr$ und sei $A + \varepsilon \cdot \delta A$ das gestörte Eichpotential. \\
 Dann folgt aus der Variation der Wirkung: 
 
 \begin{align*}
-\eval{\frac{d}{d \epsilon} \text{I}[A + \varepsilon \cdot \delta A]}_{\varepsilon=0} &= \eval{\frac{d}{d \epsilon} \left( \int - \frac{1}{2} \dd(A + \varepsilon \cdot \delta A) \w \star \dd(A + \varepsilon \cdot \delta A) + (A + \varepsilon \cdot \delta A) \w \star J \right)}_{\varepsilon=0} \\
+\eval{\frac{d}{d \epsilon} \mathcal{S}[A + \varepsilon \cdot \delta A]}_{\varepsilon=0} &= \eval{\frac{d}{d \epsilon} \left( \int - \frac{1}{2} \dd(A + \varepsilon \cdot \delta A) \w \star \dd(A + \varepsilon \cdot \delta A) + (A + \varepsilon \cdot \delta A) \w \star J \right)}_{\varepsilon=0} \\
 &= \int - \frac{1}{2} \left(\underbrace{\dd A  \w \star \dd \delta A}_{=  \left< \dd A, \dd \delta A \right>\text{vol}}  + \underbrace{\dd \delta A \w \star \dd A}_{=  \left< \dd \delta A, \dd A \right>\text{vol}} \right) + \delta A \w \star J \\
 &= \int - \dd \delta A \w \star \dd A + \delta A \w \star J  \\
 &= \int - \delta A \w \dd \star \dd A + \delta A \w \star J \\
