@@ -26,15 +26,15 @@ Damit lassen sich (1) und (2) schreiben als:
 Wir wollen diese beiden Gleichungen zusammenfassen, indem wir für das elektromagnetische Feld die 2-Form $F$ im $\mathbb{R}^4$ einführen:
 
 \begin{align}  
-F= \dd t \w E -B 
-\end{align} \todo{passen die Vorzeichen?}
+F= E \w \dd t + B 
+\end{align} 
 
 denn dann haben wir:
 
 \begin{align}
-\dd F &= - \dd t \w \dd E - \dd B \notag \\
-		&= - \dd t \w (\dd_s E + \dd t \w \partial_t E ) - \dd_s B - \dd t \w \partial_t B \notag \\
-		&= -\dd t \w (\dd_s E + \partial_t B) - \dd_s B
+\dd F &= \dd E \w \dd t + \dd B \notag \\
+		&= (\dd_s E + \dd t \w \partial_t E ) \w \dd t + \dd_s B + \dd t \w \partial_t B \notag \\
+		&= (\dd_s E + \partial_t B) \w \dd t + \dd_s B
 \end{align}
 
 Damit lassen sich beide homogenen Maxwell-Gleichungen kurz zu: 
@@ -54,10 +54,10 @@ mit dem Feldstärke-Tensor:
 \begin{align}
 \fd =
 \begin{pmatrix}
-\phantom{-}0 & \phantom{-}E_x & \phantom{-}E_y & \phantom{-}E_z \\
--E_x & \phantom{-}0 & -B_z & \phantom{-}B_y \\
--E_y & \phantom{-}B_z & \phantom{-}0 & -B_x \\
--E_z & -B_y & \phantom{-}B_x \phantom{-}& 0
+\phantom{-}0 & -E_x & -E_y & -E_z \\
+\phantom{-}E_x & \phantom{-}0 & \phantom{-}B_z & -B_y \\
+\phantom{-}E_y & -B_z & \phantom{-}0 & \phantom{-}B_x \\
+\phantom{-}E_z & \phantom{-}B_y & -B_x & \phantom{-}0
 \end{pmatrix}
 \end{align}
 
@@ -95,4 +95,9 @@ Wir erinnern uns an die neue Darstellung der Felder nach Gl. (\todo{richtige Num
 E &= E_x \dd x +E_y \dd y + E_z \dd z   \\
 B &= B_x \dd y \w \dd z + B_y \dd z \w \dd x + B_z \dd x \w \dd y 
 \end{align*}
+<<<<<<< HEAD
 Für die Transformation müssen wir also eine 1-Form in eine 2-Form überführen und umgekehrt. Im $\mathbb{R}^3$ kann diese Transformation mit dem \bfseries Hodge-Stern-Operator \normalfont realisiert werden.
+=======
+
+Für die Transformation müssen wir also eine 1-Form in eine 2-Form überführen und umgekehrt. Im $\mathbb{R}^3$ kann diese Transformation mit dem \bfseries Hodge-Stern-Operator \normalfont realisiert werden.
+>>>>>>> 8b7201361530f31e0939f488e9005b8929dd4179
