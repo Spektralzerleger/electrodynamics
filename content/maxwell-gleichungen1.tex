@@ -23,13 +23,35 @@ Damit lassen sich (1) und (2) schreiben als:
 \partial_t B + \dd_s E &=0
 \end{align}
 
-Wir wollen diese beiden Gleichungen zusammenfassen, indem wir für das elektromagnetische Feld die 2-Form $F$ im $\mathbb{R}^4$ einführen:
+Darüber hinaus sieht man dies, wenn man die beiden Felder zur 2-Form $F$ im $\mathbb{R}^4$ zusammenfasst:
+\begin{align}
+F = \frac{1}{2} \fd \dd x^{\mu} \w \dd x^{\nu}
+\end{align}
 
+In Komponentenschreibweise hatte der Feldstärke-Tensor folgende Einträge:
+
+\begin{align}
+\fd =
+\begin{pmatrix}
+\phantom{-}0 & -E_x & -E_y & -E_z \\
+\phantom{-}E_x & \phantom{-}0 & \phantom{-}B_z & -B_y \\
+\phantom{-}E_y & -B_z & \phantom{-}0 & \phantom{-}B_x \\
+\phantom{-}E_z & \phantom{-}B_y & -B_x & \phantom{-}0
+\end{pmatrix}
+\end{align}
+
+Man sieht also, dass man die 2-Form $F$ als
+\begin{align}
+F =  [E_1 \dd x^1 +E_2 \dd x^2 + E_3 \dd x^3] \w \dd x^0 + [B_3 \dd x^1 \w \dd x^2 + B_2 \dd x^3 \w \dd x^1 + B_1 \dd x^2 \w \dd x^3]
+\end{align}
+schreiben kann und deshalb die 1-Form $E$ und die 2-Form $B$ ganz natürlich bei der Verallgemeinerung auf den $\mathbb{R}^4$ entstehen.
+
+Wir definieren also
 \begin{align}  
 F= E \w \dd t + B 
 \end{align} 
 
-denn dann haben wir:
+und sehen:
 
 \begin{align}
 \dd F &= \dd E \w \dd t + \dd B \notag \\
@@ -44,22 +66,6 @@ Damit lassen sich beide homogenen Maxwell-Gleichungen kurz zu:
 \end{align}
 
 zusammenfassen. \\
-In Komponentenschreibweise gilt für das elektromagnetische Feld
-
-\begin{align}
-F = \frac{1}{2} \fd \dd x^{\mu} \w \dd x^{\nu}
-\end{align}
-
-mit dem Feldstärke-Tensor:
-\begin{align}
-\fd =
-\begin{pmatrix}
-\phantom{-}0 & -E_x & -E_y & -E_z \\
-\phantom{-}E_x & \phantom{-}0 & \phantom{-}B_z & -B_y \\
-\phantom{-}E_y & -B_z & \phantom{-}0 & \phantom{-}B_x \\
-\phantom{-}E_z & \phantom{-}B_y & -B_x & \phantom{-}0
-\end{pmatrix}
-\end{align}
 
 Da die äußere Ableitung koordinatenunabhängig ist, gilt $\dd F = 0$ auf jeder beliebigen Mannigfaltigkeit und hängt nicht von der Wahl der Koordinaten ab. \\
 Die 2-Form $F$ ist demnach geschlossen und besitzt nach dem \bfseries Poincaré-Lemma \normalfont ein Potential:
