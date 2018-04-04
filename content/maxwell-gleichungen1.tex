@@ -4,54 +4,32 @@ Dazu nehmen wir einen allgemeinen Standpunkt ein und müssen das elektrische und
 Zunächst einmal bemerken wir, dass sich die äußere Ableitung einer 1-Form in einen Raumanteil und einen Zeitanteil aufteilen lässt:
 
 \begin{align}
-\dd \omega &= \partial_0 \omega_I \dd x^0 \w \dd x^{I} + \partial_i \omega_I \dd x^i \w \dd x^{I} \\
+\dd \omega &= \partial_0 \omega_I \dd x^0 \w \dd x^{I} + \partial_i \omega_I \dd x^i \w \dd x^{I} \notag\\
 &= \dd t \w \partial_t \omega + \dd_s \omega 
 \end{align}
 
 wobei I über alle Multi-Indizes läuft. \\
-Betrachtet man die Gleichungen (1) und (2), so fällt auf, dass es sinnvoll erscheint das E-Feld als 1-Form sowie das B-Feld als 2-Form zu schreiben:
+Es fällt auf, dass es sinnvoll erscheint das E-Feld als 1-Form sowie das B-Feld als 2-Form zu schreiben:
 
 \begin{align}
 E &= E_x \dd x +E_y \dd y + E_z \dd z   \\
 B &= B_x \dd y \w \dd z + B_y \dd z \w \dd x + B_z \dd x \w \dd y 
 \end{align}
 
-Damit lassen sich (1) und (2) schreiben als:
+Damit lassen sich (15) und (16) schreiben als:
 
 \begin{align}
 \dd_s B &= 0 \\
 \partial_t B + \dd_s E &=0
 \end{align}
 
-Darüber hinaus sieht man dies, wenn man die beiden Felder zur 2-Form $F$ im $\mathbb{R}^4$ zusammenfasst:
-\begin{align}
-F = \frac{1}{2} \fd \dd x^{\mu} \w \dd x^{\nu}
-\end{align}
+Wir wollen diese beiden Gleichungen zusammenfassen, indem wir für das elektromagnetische Feld die 2-Form $F$ im $\mathbb{R}^4$ einführen:
 
-In Komponentenschreibweise hatte der Feldstärke-Tensor folgende Einträge:
-
-\begin{align}
-\fd =
-\begin{pmatrix}
-\phantom{-}0 & -E_1 & -E_2 & -E_3 \\
-\phantom{-}E_1 & \phantom{-}0 & \phantom{-}B_3 & -B_2 \\
-\phantom{-}E_2 & -B_3 & \phantom{-}0 & \phantom{-}B_1 \\
-\phantom{-}E_3 & \phantom{-}B_2 & -B_1 & \phantom{-}0
-\end{pmatrix}
-\end{align}
-
-Man sieht also, dass man die 2-Form $F$ als
-\begin{align}
-F =  [E_1 \dd x^1 +E_2 \dd x^2 + E_3 \dd x^3] \w \dd x^0 + [B_3 \dd x^1 \w \dd x^2 + B_2 \dd x^3 \w \dd x^1 + B_1 \dd x^2 \w \dd x^3]
-\end{align}
-schreiben kann und deshalb die 1-Form $E$ und die 2-Form $B$ ganz natürlich bei der Verallgemeinerung auf den $\mathbb{R}^4$ entstehen.
-
-Wir definieren also
 \begin{align}  
 F= E \w \dd t + B 
 \end{align} 
 
-und sehen:
+denn dann haben wir:
 
 \begin{align}
 \dd F &= \dd E \w \dd t + \dd B \notag \\
@@ -66,6 +44,22 @@ Damit lassen sich beide homogenen Maxwell-Gleichungen kurz zu:
 \end{align}
 
 zusammenfassen. \\
+In Komponentenschreibweise gilt für das elektromagnetische Feld
+
+\begin{align}
+F = \frac{1}{2} \fd \dd x^{\mu} \w \dd x^{\nu}
+\end{align}
+
+mit dem Feldstärke-Tensor:
+\begin{align}
+\fd =
+\begin{pmatrix}
+\phantom{-}0 & -E_x & -E_y & -E_z \\
+\phantom{-}E_x & \phantom{-}0 & \phantom{-}B_z & -B_y \\
+\phantom{-}E_y & -B_z & \phantom{-}0 & \phantom{-}B_x \\
+\phantom{-}E_z & \phantom{-}B_y & -B_x & \phantom{-}0
+\end{pmatrix}
+\end{align}
 
 Da die äußere Ableitung koordinatenunabhängig ist, gilt $\dd F = 0$ auf jeder beliebigen Mannigfaltigkeit und hängt nicht von der Wahl der Koordinaten ab. \\
 Die 2-Form $F$ ist demnach geschlossen und besitzt nach dem \bfseries Poincaré-Lemma \normalfont ein Potential:
@@ -96,10 +90,12 @@ E \rightarrow B \qquad \text{sowie} \qquad B \rightarrow -E
 \end{align*}
 
 die Invarianz der Maxwell-Gleichungen im Vakuum charakterisiert, wollen wir nun eine neue Methode, genauer einen neuen Operator einführen der uns diese Transformationen ermöglicht. \\
-Wir erinnern uns an die neue Darstellung der Felder nach Gl. (\todo{richtige Nummer}) und (\todo{richtige Nummer}):
+Wir erinnern uns an die neue Darstellung der Felder nach Gl. (21) und (22):
 \begin{align*}
 E &= E_x \dd x +E_y \dd y + E_z \dd z   \\
 B &= B_x \dd y \w \dd z + B_y \dd z \w \dd x + B_z \dd x \w \dd y 
 \end{align*}
 Für die Transformation müssen wir also eine 1-Form in eine 2-Form überführen und umgekehrt. Im $\mathbb{R}^3$ kann diese Transformation mit dem \bfseries Hodge-Stern-Operator \normalfont realisiert werden.
 
+
+Für die Transformation müssen wir also eine 1-Form in eine 2-Form überführen und umgekehrt. Im $\mathbb{R}^3$ kann diese Transformation mit dem \bfseries Hodge-Stern-Operator \normalfont realisiert werden.

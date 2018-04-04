@@ -1,0 +1,17 @@
+[0] Config.pm:343> INFO - This is Biber 2.5
+[0] Config.pm:346> INFO - Logfile is 'handout-main.blg'
+[52] biber-darwin:290> INFO - === Mi Apr  4, 2018, 17:11:58
+[79] Biber.pm:351> INFO - Reading 'handout-main.bcf'
+[184] Biber.pm:773> INFO - Using all citekeys in bib section 0
+[196] Biber.pm:3493> INFO - Processing section 0
+[215] Biber.pm:3657> INFO - Looking for bibtex format file 'bibliography/electrodynamics-bib.bib' for section 0
+[217] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[218] bibtex.pm:1048> INFO - Found BibTeX data source 'bibliography/electrodynamics-bib.bib'
+[222] Utils.pm:149> WARN - Duplicate entry key: 'Dray1999' in file 'bibliography/electrodynamics-bib.bib', skipping ...
+[276] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[277] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[277] Biber.pm:3306> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'de-DE'
+[277] Biber.pm:3310> INFO - No sort tailoring available for locale 'de-DE'
+[294] bbl.pm:526> INFO - Writing 'handout-main.bbl' with encoding 'UTF-8'
+[298] bbl.pm:619> INFO - Output to handout-main.bbl
+[298] Biber.pm:108> INFO - WARNINGS: 1

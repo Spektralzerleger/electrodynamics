@@ -1,8 +1,8 @@
 \subsection{Eichtransformationen und Eichinvarianz}
 Die Eichtransformation $A'_{\mu} = A_{\mu} - \partial_{\mu}\phi$ \ ändert die Lagrangedichte im Allgemeinen:
-\begin{align*}
+\begin{align}
 \lagr'(A'_{\tau},\partial_{\tau}A'_{\tau}) = \lagr(A_{\tau},\partial_{\tau}A_{\tau})+ j^{\mu}\partial_{\mu}\phi
-\end{align*}
+\end{align}
 Da die Kontinuitätsgleichung $\partial_{\mu}j^{\mu}=0$ gilt, kann man $j^{\mu}\partial_{\mu}\phi$ durch $\partial_{\mu}(j^{\mu}\phi)$ ersetzen.
 Dies lässt sich wieder als Divergenz auffassen und hat deshalb keinen Einfluss auf die Bewegungsgleichungen:
 
@@ -30,15 +30,15 @@ Damit erhalten wir:
 
 Für das elektromagnetische Feld $\lagr = -\frac{1}{4} \fd \fu - j_{\mu}A^{\mu}$ folgt:
 
-\begin{align*}
+\begin{align}
 \eitens = - \fu j^{\nu}A_{\sigma}+g^{\mu\nu}\left( \frac{1}{4} F_{\sigma\tau}F^{\sigma\tau}+j_{\mu}A^{\mu}\right)
-\end{align*}
+\end{align}
 
 In dieser Fom ist der Feldstärketensor aber nicht eichinvariant, denn unter der Transformation $A^{\mu} \ \rightarrow \ A^{\mu} + \partial^{\mu}\phi$ folgt:
 
-\begin{align*}
+\begin{align}
 \eitens \quad \rightarrow \quad \eitens + g^{\mu\nu}j_{\tau}\partial^{\tau}\phi-F^{\mu\sigma}\partial^{\nu}\partial_{\sigma}\phi = \eitens + \partial_{\sigma}(g^{\mu\nu}j^{\sigma}\phi - F^{\mu\sigma}j^{\nu}\phi) - j^{\mu}\partial^{\nu}\phi
-\end{align*}
+\end{align}
 
 Wir wollen einen Ausdruck für $\eitens$ finden, der eichinvariant und symmetrisch ist. \\
 Dazu bemerken wir, dass zur Lagrangedichte eine Divergenz addiert werden kann ohne die Bewegungsgleichungen zu ändern. Also hat der Energie-Impuls-Tensor eine gewisse Beliebigkeit, die wir ausnutzen können. 
@@ -52,9 +52,9 @@ Der Energiestrom bleibt unverändert unter einer Transformation $\eitens \ \righ
 Obiger Zusatzterm nach der Eichung motiviert $\grad{\eitens}=\partial_{\sigma}(F^{\mu\sigma})$ und erfüllt die Bedingungen. \\
 Setzen wir also:
 
-\begin{align*}
+\begin{align}
 \eitens = -F^{\mu\sigma}\partial^{\nu}A_{\sigma} + g^{\mu\nu}\left( \frac{1}{4}F_{\sigma\tau}F^{\sigma\tau} + j_{\tau}A{\tau} \right) + \partial_{\sigma} \left(F^{\mu\sigma}A^{\nu} \right)
-\end{align*}
+\end{align}
 
 und schreiben mit der Maxwell-Gleichung $\partial_{\sigma}F^{\mu\sigma}=-j^{\mu}$ den neuen Ausdruck:
 

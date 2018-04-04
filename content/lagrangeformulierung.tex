@@ -26,13 +26,13 @@ Wir wollen $\lagr$ \ so wählen, dass sie ein Skalar ist, von den Feldern sowie 
 \partial_{\mu}\fu = j^{\nu} \qquad  \Longleftrightarrow \qquad \Box A^{\nu} - \partial^{\nu}(\partial_{\mu}A^{\mu}) = j^{\nu}
 \end{align}
 Da wir als Bewegungsgleichungen Differentialgleichungen 2. Ordnung erwarten, bietet es sich an, das 4er-Feld $A^{\mu}$ wie folgt anzusetzen:
-\begin{align*}
+\begin{align}
 \lagr = \text{a} \cdot \partial_{\mu}A^{\nu}\partial^{\mu}A_{\nu} + \text{b} \cdot \partial_{\mu}A^{\nu}\partial_{\nu}A^{\mu} + \text{c} \cdot (\partial_{\mu}A^{\mu})^2 + \text{d} \cdot A_{\mu}A^{\mu} + \text{e} \cdot A_{\mu}j^{\mu}
-\end{align*}
+\end{align}
 Setzt man dies in (1) ein und wählt die Koeffizienten so, dass (2) herauskommt, findet man:
-\begin{align*}
+\begin{align}
 \lagr = -\frac{1}{4} \fd \fu - j_{\mu}A^{\mu} + \frac{\text{c}}{2} \underbrace{\left[ (\partial_{\mu}A^{\mu})^2 - \partial_{\mu}A^{\nu}\partial_{\nu}A^{\mu} \right]}_{= \partial_{\mu}(A^{\mu}\partial_{\varrho}A^{\varrho}-A_{\nu}\partial^{\nu}A^{\mu})}
-\end{align*}
+\end{align}
 Da der letzte Term sich als Divergenz schreiben lässt, ist er nur ein Randterm und verschwindet bei der Variation. Er ändert somit nichts an den Bewegungsgleichungen! \\ 
 Es folgt also:
 \begin{mybox}{Lagrangedichte}
