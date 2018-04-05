@@ -1,8 +1,7 @@
 \subsection{homogene Maxwell-Gleichungen}
 Wir wollen zunächst einmal die beiden homogenen Maxwell-Gleichungen umformulieren. \\
 Dazu nehmen wir einen allgemeinen Standpunkt ein und müssen das elektrische und das magnetische Feld als Vektorfelder in der 4D-Raumzeit auffassen. Wir arbeiten nachfolgend in der Minkowski-Raumzeit in den Standard-Raumzeit-Koordinaten $x^{\mu}$. \\
-Die Metrik sei
-
+Die Metrik sei:
 \begin{align}
 g_{\mu \nu} =
 \begin{pmatrix}
@@ -12,37 +11,27 @@ g_{\mu \nu} =
 \phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1
 \end{pmatrix}.
 \end{align}
-
 Zunächst einmal bemerken wir, dass sich die äußere Ableitung einer 1-Form in einen Raumanteil und einen Zeitanteil aufteilen lässt:
-
 \begin{align}
 \dd \omega &= \partial_0 \omega_I \dd x^0 \w \dd x^{I} + \partial_i \omega_I \dd x^i \w \dd x^{I} \notag\\
 &= \dd t \w \partial_t \omega + \dd_s \omega 
 \end{align}
-
 wobei $\dd_s$ die auf den Raumanteil eingeschränkte äußere Ableitung ist und $I$ ein Multi-Index. \\
 Betrachtet man die homogenen Maxwell-Gleichungen und die Eigenschaften der äußeren Ableitung, fällt auf, dass es sinnvoll erscheint, das E-Feld als 1-Form sowie das B-Feld als 2-Form zu schreiben:
-
 \begin{align}
 E &= E_x \dd x +E_y \dd y + E_z \dd z   \\
 B &= B_x \dd y \w \dd z + B_y \dd z \w \dd x + B_z \dd x \w \dd y 
 \end{align}
-
-Damit lassen sich () und () schreiben als: \todo{Nummern richtig}
-
+Damit lassen sich (15) und (16) schreiben als:
 \begin{align}
 \dd_s B &= 0 \\
 \partial_t B + \dd_s E &=0
 \end{align}
-
 Dies sieht man auch, wenn man das $E$- und $B$-Feld zur 2-Form $F$ auf dem $\mathbb{R}^4$ zusammenfasst:
-
 \begin{align}
 F = \frac{1}{2} \fd \dd x^{\mu} \w \dd x^{\nu},
 \end{align}
-
 wobei $\fd$ der gewohnte Feldstärketensor ist und in Komponentenschreibweise als 
-
 \begin{align}
 \fd =
 \begin{pmatrix}
@@ -52,23 +41,17 @@ wobei $\fd$ der gewohnte Feldstärketensor ist und in Komponentenschreibweise al
 \phantom{-}E_3 & \phantom{-}B_2 & -B_1 & \phantom{-}0
 \end{pmatrix}
 \end{align}
-
 gegeben war. \\
-
 Man sieht also, dass man
-
 \begin{align}
-F = \left( E_1 \dd x^1 +E_2 \dd x^2+ E_3 \dd x^3 \right) \w \dd x^0  \\ + \left( B_3 \dd x^1 \w \dd x^2 + B_2 \dd x^3 \w \dd x^1 + B_1 \dd x^2 \w \dd x^3 \right)
+\hspace{-3mm}F = \left( E_1 \dd x^1 \hspace{-0.3mm}+\hspace{-0.3mm}E_2 \dd x^2\hspace{-0.3mm}+\hspace{-0.3mm} E_3 \dd x^3 \right) \w \dd x^0 \hspace{-0.3mm}+\hspace{-0.3mm} \left( B_3 \dd x^1 \w \dd x^2 \hspace{-0.3mm}+\hspace{-0.3mm} B_2 \dd x^3 \w \dd x^1 \hspace{-0.3mm}+\hspace{-0.3mm} B_1 \dd x^2 \w \dd x^3 \right)
 \end{align}
-
-schreiben kann. Damit wird das $E$-Feld ganz natürlich zur 1-Form und das $B$-Feld zur 2-Form, wenn man die beiden Felder auf die 4-dimensionalen Raumzeit verallgemeinert. Wir definieren also die 2-Form des elektromagnetischen Feldes $F$:
-
+schreiben kann. Damit wird das $E$-Feld ganz natürlich zur 1-Form und das $B$-Feld zur 2-Form, wenn man die beiden Felder auf die 4-dimensionalen Raumzeit verallgemeinert. 
+Wir definieren also die 2-Form des elektromagnetischen Feldes $F$:
 \begin{align}  
 F= E \w \dd t + B 
 \end{align} 
-
-Wir bemerken, dass bei der äußeren Ableitung von $F$ die linken Seiten der Gleichungen (23?) und (24?) auftreten:
-
+Wir bemerken, dass bei der äußeren Ableitung von $F$ die linken Seiten der Gleichungen (24) und (25) auftreten:
 \begin{align}
 \dd F &= \dd E \w \dd t + \dd B \notag \\
 		&= (\dd_s E + \dd t \w \partial_t E ) \w \dd t + \dd_s B + \dd t \w \partial_t B \notag \\
@@ -76,31 +59,21 @@ Wir bemerken, dass bei der äußeren Ableitung von $F$ die linken Seiten der Gle
 \end{align}
 
 Da $\dd F$ nur dann Null ist, wenn die beiden Summanden unabhängig Null sind, lassen sich die beiden homogenen Maxwell-Gleichungen kurz zu: 
-
 \begin{align}
 \dd F = 0
 \end{align}
-
 zusammenfassen. \\
-
-
-
 Da die äußere Ableitung koordinatenunabhängig ist, gilt $\dd F = 0$ auf jeder beliebigen Mannigfaltigkeit und hängt nicht von der Wahl der Koordinaten ab. \\
 Die 2-Form $F$ ist demnach geschlossen und besitzt nach dem \bfseries Poincaré-Lemma \normalfont ein Potential:
-
 \begin{align}
 F = \dd A 
 \end{align}
-
 wobei A eine 1-Form ist. \\
 Damit gilt automatisch $ \dd F = \dd (\dd A) = 0$. Außerdem sehen wir, dass wir eine Eichfreiheit haben:
-
 \begin{align}
 A \quad \rightarrow \quad A + \dd \lambda \qquad\qquad \lambda \in C^{\infty}(\mathbb{R}^4)
 \end{align}.
-
 Mit Hilfe dieses Potentials lassen sich die Felder wie folgt darstelllen:
-
 \begin{align}
 E &= -\partial_t A \\
 B &= \dd_s A.

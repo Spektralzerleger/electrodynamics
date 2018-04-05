@@ -5,16 +5,12 @@ Um den Vortrag abzurunden, kommen wir wieder kurz auf die Lagrange-Beschreibung 
 Derartige Ausdrücke werden später auch in der Yang-Mills-Theorie und der Chern-Simons-Theorie auftreten. Ihr Vorteil ist, dass sie automatisch alle geforderten Punkte in Kapitel 1 erfüllen, insbesondere die Koordinatenunabhängigkeit. \\
 
 Die Lagrangians setzt man meistens axiomatisch an und zeigt dann, dass sie die gewünschten Gleichungen liefern. Für das elektromagnetische Feld gilt:
-
 \begin{align}
 \lagr = - \frac{1}{2} F \w \star F + A \w \star J,
 \end{align}
-
 wobei $F$, $A$ und $J$ gemäß den obigen Definitionen gegeben sind. Es gelte $F = \dd A$. \\
-
 Das zugehörige Wirkungsfunktional sei $\mathcal{S} [A]=\int \lagr$ und das gestörte Eichpotential sei $A + \varepsilon \cdot \delta A$. \\
 Dann folgt aus der Variation der Wirkung: 
-
 \begin{align*}
 \eval{\frac{d}{d \epsilon} \mathcal{S}[A + \varepsilon \cdot \delta A]}_{\varepsilon=0} &= \eval{\frac{d}{d \epsilon} \left( \int - \frac{1}{2} \dd(A + \varepsilon \cdot \delta A) \w \star \dd(A + \varepsilon \cdot \delta A) + (A + \varepsilon \cdot \delta A) \w \star J \right)}_{\varepsilon=0} \\
 &= \int - \frac{1}{2} \left(\underbrace{\dd A  \w \star \dd \delta A}_{=  \left< \dd A, \dd \delta A \right>\text{vol}}  + \underbrace{\dd \delta A \w \star \dd A}_{=  \left< \dd \delta A, \dd A \right>\text{vol}} \right) + \delta A \w \star J \\
@@ -22,12 +18,9 @@ Dann folgt aus der Variation der Wirkung:
 &= \int - \delta A \w \dd \star \dd A + \delta A \w \star J \\
 &= \int \delta A \w \left( - \dd \star \dd A + \star J \right)
 \end{align*}
-
 Da die Variation bei $\varepsilon = 0$ für beliebige $\delta A$ verschwinden muss, gilt: 
-
 \begin{align*}
 \dd \star \dd A &= \star J \\
 \dd \star F &= \star J
 \end{align*}
-
 was wir bereits zuvor hergeleitet hatten.

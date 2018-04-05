@@ -1,31 +1,24 @@
 \subsection{Hodge-Stern-Operator}
 Der Hodge-Stern-Operator ist eine der drei Standard-Operationen auf dem Raum der Differentialformen. \\
 Man spricht beim Kreuzprodukt von einer Rotation von Pseudovektoren, was nun anhand der Definition des Operators veranschaulicht werden soll. Wir werden sehen, dass die "Rechte-Hand-Regel" und die Metrik eingehen. \\
-Ganz allgemein sei $V$ ein n-dimensionaler Vektorraum mit innerem Produkt $g$, induziert von der inversen Metrik, und ${\sigma^1, ..., \sigma^n}$ die geordnete Orthonormalbasis des Vektorraumes, sodass
-
+Ganz allgemein sei $V$ ein n-dimensionaler Vektorraum mit innerem Produkt $g$, induziert von der inversen Metrik, und ${\sigma^1, ..., \sigma^n}$ die geordnete Orthonormalbasis des Vektorraumes, sodass:
 \begin{align*}
 g^{i j} := g(\sigma^{i},\sigma^{j}) = \pm \delta^{i j}.
 \end{align*}
-
-
 Der Hodge-Stern-Operator ist abstrakt definiert als die lineare Abbildung:
 \begin{align*}
 \star : \Lambda^p V \quad \rightarrow \quad  \Lambda^{n-p} V 
 \end{align*}
-
 mit der Eigenschaft
-
 \begin{align}
 \lambda \w \theta = (-1)^s g(\theta,\star\lambda) \omega
 \end{align}
-
-wobei $\omega = \sigma^1 \w ... \w \sigma^n \in \Lambda^n V$, $\lambda \in \Lambda^p V$ und $\theta \in \Lambda^{n-p} V$. Dabei ist
-
- \begin{align}
- g(\omega,\omega) = \prod_{k=1}^{n} g(\sigma^{i},\sigma^{i}) = (-1)^s
- \end{align}
+wobei $\omega = \sigma^1 \w ... \w \sigma^n \in \Lambda^n V$, $\lambda \in \Lambda^p V$ und $\theta \in \Lambda^{n-p} V$. Dabei ist:
+\begin{align}
+g(\omega,\omega) = \prod_{k=1}^{n} g(\sigma^{i},\sigma^{i}) = (-1)^s
+\end{align}
  
-mit der Signatur $(s,n-s)$, wobei $s$ die Anzahl an $-$-Zeichen in der inversen Metrik ist.
+mit der Signatur $(s,n-s)$, wobei $s$ die Anzahl an Minuszeichen in der inversen Metrik ist.
 
  
 Wir wollen mit einer etwas anschaulicheren, praktischeren Definition arbeiten, welche sich durch kleinere Umformungen aus der abstrakten Definition ergibt. Da der $\star$-Operator linear ist, reicht es aus Basisvektoren zu betrachten. \\
@@ -46,7 +39,6 @@ Daraus folgt direkt $J = (p+1, ..., n)$ und
 \end{align}
 
 Aus der Tatsache, dass $\lambda \w \sigma^J = \omega$ erhalten wir:
-
 \begin{align}
 1 = (-1)^s g(\sigma^J,\text{c}\cdot\sigma^J)
 \end{align}
@@ -56,7 +48,7 @@ Oder Analog:
 \text{c}= \frac{(-1)^s}{g(\sigma^J,\sigma^J)} = \frac{g(\omega,\omega)}{g(\sigma^J,\sigma^J)} = g(\lambda,\lambda)
 \end{align}
 
-Alles zusammen führt zur der praktischen Definition des Operators als:
+Alles zusammen führt zur praktischen Definition des Operators als:
 \begin{mybox}{Hodge-Stern-Operator}
 \begin{align}
 \star(\sigma^1 \w \sigma^2 \w \dots \w \sigma^p) = g(\sigma^1,\sigma^1)\dots g(\sigma^p,\sigma^p) \sigma^{p+1}\w \dots \w \sigma^n
@@ -72,12 +64,9 @@ Wörtlich gesprochen liefert uns der Hodge-Stern-Operator die duale $(n-p)$-Form
  \end{align}
 
 
-Für unsere Anwendung wählen wir als Vektorraum $V$ den Raum der 1-Formen $\Omega^1(\mathcal{M})$ und ersetzen $\Lambda^n V \rightarrow \Omega^n(\mathcal{M})$. Die geordnete Orthonormalbasis ist nun also ${\dd x^1, ..., \dd x^n}$. \\
-
-
+Für unsere Anwendung wählen wir als Vektorraum $V$ den Raum der 1-Formen $\Omega^1(\mathcal{M})$ und ersetzen $\Lambda^n V \rightarrow \Omega^n(\mathcal{M})$. Die geordnete Orthonormalbasis ist nun also ${\dd x^1, ...\ , \dd x^n}$. \\
 
 Eine alternative Definition des Operators, mit der wir ebenfalls noch arbeiten wollen, lautet (nun angewandt auf Differentialformen):
-
 \begin{align}
 \omega \w \star \mu = \left<\omega,\mu \right> \text{vol}, \ \forall \omega, \mu \in \Omega^p(\mathcal{M})
 \end{align}
@@ -106,7 +95,7 @@ Wenden wir nun den $\star$-Operator an, folgt zum Beispiel:
 \item \star \omega &= -1 \\
 \item  \star \dd t &= - \dd x \w \dd y \w \dd z \\
 \item \star \dd x \w \dd y \w \dd z &= - \dd t \\
-\item \star\star \omega &= (-1)^{4(4-4)+1} \omega = -\omega \\
+\item \star^2 \omega &= (-1)^{4(4-4)+1} \omega = -\omega \\
 \item \dots
 \end{align*}
 \end{itemize}
