@@ -27,10 +27,6 @@ mit der Eigenschaft
  
 mit der Signatur $(s,n-s)$, wobei $s$ die Anzahl an $-$-Zeichen in der inversen Metrik ist.
 
- Für die zweifache Anwendung des Operators gilt: (ohne Herleitung)
- \begin{align}
- \star \star = \star^2 = (-1)^{p(n-p)+s}
- \end{align}
  
 Wir wollen mit einer etwas anschaulicheren, praktischeren Definition arbeiten, welche sich durch kleinere Umformungen aus der abstrakten Definition ergibt. \\
 
@@ -39,17 +35,17 @@ Wir wollen mit einer etwas anschaulicheren, praktischeren Definition arbeiten, w
  \lambda = \sigma^1 \w \sigma^2 \w \dots \w \sigma^p = \sigma^{I} \quad \in \Lambda^p V
  \end{align}
  
- Einsetzen eines zweiten Vektors $\sigma^J \ \in \Lambda^{n-p}$ in die abstrakte Definition liefert:
+ Einsetzen eines zweiten Basis-Vektors $\sigma^J \ \in \Lambda^{n-p}$ in die abstrakte Definition liefert:
 \begin{align}
 \lambda \w \sigma^J = (-1)^s g(\sigma^J,\star \lambda)\omega
 \end{align}
 
-Daraus folgt direkt:
+Daraus folgt direkt $J = (p+1, ..., n)$ und 
 \begin{align}
-\star\lambda = \text{c} \cdot \sigma^{p+1} \w \dots \w \sigma^n
+\star\lambda = \text{c} \cdot \sigma^{p+1} \w \dots \w \sigma^n.
 \end{align}
 
-Aus der Tatsache, dass $\lambda\w\sigma^J = \omega$ erhalten wir:
+Aus der Tatsache, dass $\lambda \w \sigma^J = \omega$ erhalten wir:
 
 \begin{align}
 1 = (-1)^s g(\sigma^J,\text{c}\cdot\sigma^J)
@@ -68,8 +64,17 @@ Alles zusammen führt zur der praktischen Definition des Operators als:
 \end{mybox}
 
 
+ Für die zweifache Anwendung des Operators gilt: (ohne Herleitung)
+ \begin{align}
+ \star \star = \star^2 = (-1)^{p(n-p)+s}
+ \end{align}
 
-Eine alternative Definition des Operators, mit der wir ebenfalls noch arbeiten wollen, lautet:
+
+
+
+
+
+Eine alternative Definition des Operators, mit der wir ebenfalls noch arbeiten wollen, lautet (nun angewandt auf Differentialformen):
 \begin{align}
 \omega \w \star \mu = \left<\omega,\mu \right>\text{vol} = g(\omega,\mu)\alpha \quad \forall \omega, \mu \in \Omega^p(\mathcal{M}), \alpha \in \Omega^n(\mathcal{M})
 \end{align}
