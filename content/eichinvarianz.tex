@@ -1,5 +1,5 @@
 \subsection{Eichtransformationen und Eichinvarianz}
-Die Eichtransformation $A'_{\mu} = A_{\mu} - \partial_{\mu}\phi$ \ ändert die Lagrangedichte im Allgemeinen:
+Die Eichtransformation $A_{\mu} \rightarrow A'_{\mu} = A_{\mu} - \partial_{\mu}\phi$ \ ändert die Lagrangedichte im Allgemeinen:
 \begin{align}
 \lagr'(A'_{\tau},\partial_{\tau}A'_{\tau}) = \lagr(A_{\tau},\partial_{\tau}A_{\tau})+ j^{\mu}\partial_{\mu}\phi
 \end{align}
@@ -10,7 +10,7 @@ Dies lässt sich wieder als Divergenz auffassen und hat deshalb keinen Einfluss 
 \text{Ladungserhaltung} \qquad \longleftrightarrow \qquad \text{Eichinvarianz}
 \end{align*}
 \\
-Besonders interessant sind Translationen $x' = x + \varepsilon \cdot a$: 
+Besonders interessant sind Translationen $x \rightarrow x + \varepsilon \cdot a$: 
 \begin{align*}
 \varphi^{(i)}(x + \varepsilon \cdot a) &= \varphi^{(i)}(x) + \overbrace{\varepsilon\cdot a^{\mu}\partial_{\mu}\varphi^{(i)}(x)}^{\delta\varphi^{(i)}} \\
 \partial_{\mu}\varphi^{(i)}(x + \varepsilon \cdot a) &= \partial_{\mu}\varphi^{(i)}(x) + \underbrace{\varepsilon\cdot\left(a^{\nu}\partial_{\nu}\partial_{\mu}\varphi^{(i)}(x) + \partial_{\mu}a^{\nu}\partial_{\nu}\varphi^{(i)}(x)\right)}_{\delta(\partial_{\mu}\varphi^{(i)})} 
@@ -34,14 +34,14 @@ Für das elektromagnetische Feld $\lagr = -\frac{1}{4} \fd \fu - j_{\mu}A^{\mu}$
 \eitens = - \fu j^{\nu}A_{\sigma}+g^{\mu\nu}\left( \frac{1}{4} F_{\sigma\tau}F^{\sigma\tau}+j_{\mu}A^{\mu}\right)
 \end{align}
 
-In dieser Fom ist der Feldstärketensor aber nicht eichinvariant, denn unter der Transformation $A^{\mu} \ \rightarrow \ A^{\mu} + \partial^{\mu}\phi$ folgt:
+In dieser Fom ist der Energie-Impuls-Tensor aber nicht eichinvariant, denn unter der Transformation $A^{\mu} \ \rightarrow \ A^{\mu} + \partial^{\mu}\phi$ folgt:
 
 \begin{align}
 \eitens \quad \rightarrow \quad \eitens + g^{\mu\nu}j_{\tau}\partial^{\tau}\phi-F^{\mu\sigma}\partial^{\nu}\partial_{\sigma}\phi = \eitens + \partial_{\sigma}(g^{\mu\nu}j^{\sigma}\phi - F^{\mu\sigma}j^{\nu}\phi) - j^{\mu}\partial^{\nu}\phi
 \end{align}
 
 Wir wollen einen Ausdruck für $\eitens$ finden, der eichinvariant und symmetrisch ist. \\
-Dazu bemerken wir, dass zur Lagrangedichte eine Divergenz addiert werden kann ohne die Bewegungsgleichungen zu ändern. Also hat der Energie-Impuls-Tensor eine gewisse Beliebigkeit, die wir ausnutzen können. 
+Dazu bemerken wir, dass zur Lagrangedichte eine Divergenz addiert werden kann ohne die Bewegungsgleichungen zu ändern. Also hat der Energie-Impuls-Tensor eine gewisse Beliebigkeit, die wir ausnutzen können. \\
 Der Energiestrom bleibt unverändert unter einer Transformation $\eitens \ \rightarrow \ \eitens+ \grad{\eitens}$ mit: 
 
 \begin{enumerate}
@@ -49,11 +49,11 @@ Der Energiestrom bleibt unverändert unter einer Transformation $\eitens \ \righ
 \item[(ii)] $ \int \dd[3]{x} \grad{T^{00}}$ \qquad \ (trägt nicht zur Gesamtenergie bei)
 \end{enumerate}
 
-Obiger Zusatzterm nach der Eichung motiviert $\grad{\eitens}=\partial_{\sigma}(F^{\mu\sigma})$ und erfüllt die Bedingungen. \\
+Obiger Zusatzterm nach der Eichung motiviert $\grad{\eitens}=\partial_{\sigma}(F^{\mu\sigma}A^{\nu})$ und erfüllt die Bedingungen. \\
 Setzen wir also:
 
 \begin{align}
-\eitens = -F^{\mu\sigma}\partial^{\nu}A_{\sigma} + g^{\mu\nu}\left( \frac{1}{4}F_{\sigma\tau}F^{\sigma\tau} + j_{\tau}A{\tau} \right) + \partial_{\sigma} \left(F^{\mu\sigma}A^{\nu} \right)
+\eitens = -F^{\mu\sigma}\partial^{\nu}A_{\sigma} + g^{\mu\nu}\left( \frac{1}{4}F_{\sigma\tau}F^{\sigma\tau} + j_{\tau}A^{\tau} \right) + \partial_{\sigma} \left(F^{\mu\sigma}A^{\nu} \right)
 \end{align}
 
 und schreiben mit der Maxwell-Gleichung $\partial_{\sigma}F^{\mu\sigma}=-j^{\mu}$ den neuen Ausdruck:
@@ -63,7 +63,6 @@ und schreiben mit der Maxwell-Gleichung $\partial_{\sigma}F^{\mu\sigma}=-j^{\mu}
 \end{align}
 
 Damit gilt $\partial_{\mu}\eitens = A_{\varrho}\partial^{\nu}j^{\varrho}$. \\
-Für den elektromagnetischen Anteil $\eitens_0 = \fu F_{\sigma}^{\phantom{\sigma}\nu} + \frac{1}{4}g^{\mu\nu}F^2$ folgt dann: 
-$\partial_{\mu}\eitens_0=j_{\varrho}F^{\varrho\nu}$ \\
+Für den rein elektromagnetischen Anteil $\eitens_0 = \fu F_{\sigma}^{\phantom{\sigma}\nu} + \frac{1}{4}g^{\mu\nu}F_{\sigma\tau}F^{\sigma\tau}$ folgt dann: $\partial_{\mu}\eitens_0=j_{\varrho}F^{\varrho\nu}$. \\
 \vspace{1pt} \\
 In Abwesenheit von äußeren Quellen ist der Energie-Impuls-Tensor \textbf{eichinvariant}, \textbf{erhalten}, \textbf{symmetrisch} und \textbf{spurfrei}.

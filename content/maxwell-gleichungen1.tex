@@ -1,6 +1,18 @@
 \subsection{homogene Maxwell-Gleichungen}
 Wir wollen zunächst einmal die beiden homogenen Maxwell-Gleichungen umformulieren. \\
 Dazu nehmen wir einen allgemeinen Standpunkt ein und müssen das elektrische und das magnetische Feld als Vektorfelder in der 4D-Raumzeit auffassen. Wir arbeiten nachfolgend in der Minkowski-Raumzeit in den Standard-Raumzeit-Koordinaten $x^{\mu}$. \\
+Die Metrik sei
+
+\begin{align}
+g_{\mu \nu} =
+\begin{pmatrix}
+-1 & \phantom{-}0 & \phantom{-}0 & \phantom{-}0 \\
+\phantom{-}0 & \phantom{-}1 & \phantom{-}0 & \phantom{-}0 \\
+\phantom{-}0 & \phantom{-}0 & \phantom{-}1 & \phantom{-}0 \\
+\phantom{-}0 & \phantom{-}0 & \phantom{-}0 & \phantom{-}1
+\end{pmatrix}.
+\end{align}
+
 Zunächst einmal bemerken wir, dass sich die äußere Ableitung einer 1-Form in einen Raumanteil und einen Zeitanteil aufteilen lässt:
 
 \begin{align}
@@ -8,15 +20,15 @@ Zunächst einmal bemerken wir, dass sich die äußere Ableitung einer 1-Form in 
 &= \dd t \w \partial_t \omega + \dd_s \omega 
 \end{align}
 
-wobei I über alle Multi-Indizes läuft. \\
-Es fällt auf, dass es sinnvoll erscheint, das E-Feld als 1-Form sowie das B-Feld als 2-Form zu schreiben:
+wobei $\dd_s$ die auf den Raumanteil eingeschränkte äußere Ableitung ist und $I$ ein Multi-Index. \\
+Betrachtet man die homogenen Maxwell-Gleichungen und die Eigenschaften der äußeren Ableitung, fällt auf, dass es sinnvoll erscheint, das E-Feld als 1-Form sowie das B-Feld als 2-Form zu schreiben:
 
 \begin{align}
 E &= E_x \dd x +E_y \dd y + E_z \dd z   \\
 B &= B_x \dd y \w \dd z + B_y \dd z \w \dd x + B_z \dd x \w \dd y 
 \end{align}
 
-Damit lassen sich (15) und (16) schreiben als:
+Damit lassen sich () und () schreiben als: \todo{Nummern richtig}
 
 \begin{align}
 \dd_s B &= 0 \\
@@ -29,7 +41,7 @@ Dies sieht man auch, wenn man das $E$- und $B$-Feld zur 2-Form $F$ auf dem $\mat
 F = \frac{1}{2} \fd \dd x^{\mu} \w \dd x^{\nu}
 \end{align}
 
-In Komponentenschreibweise war der Feldstärketensor:
+, wobei $\fd$ der gewohnte Feldstärketensor ist und in Komponentenschreibweise als 
 
 \begin{align}
 \fd =
@@ -41,19 +53,21 @@ In Komponentenschreibweise war der Feldstärketensor:
 \end{pmatrix}
 \end{align}
 
+gegeben war. \\
+
 Man sieht also, dass man
 
 \begin{align}
-F = [E_1 \dd x^1 +E_2 \dd x^2+ E_3 \dd x^3] \w \dd x^0 + [B_3 \dd x^1 \w \dd x^2 + B_2 \dd x^3 \w \dd x^1 + B_1 \dd x^2 \w \dd x^3]
+F = \left( E_1 \dd x^1 +E_2 \dd x^2+ E_3 \dd x^3 \right) \w \dd x^0 + \left( B_3 \dd x^1 \w \dd x^2 + B_2 \dd x^3 \w \dd x^1 + B_1 \dd x^2 \w \dd x^3 \right)
 \end{align}
 
-schreiben kann. Damit wird das $E$-Feld ganz natürlich zur 1-Form und das $B$-Feld zur 2-Form, wenn man die beiden Felder in der 4-dimensionalen Raumzeit betrachtet. Wir definieren also die 2-Form des elektromagnetischen Feldes $F$:
+schreiben kann. Damit wird das $E$-Feld ganz natürlich zur 1-Form und das $B$-Feld zur 2-Form, wenn man die beiden Felder auf die 4-dimensionalen Raumzeit verallgemeinert. Wir definieren also die 2-Form des elektromagnetischen Feldes $F$:
 
 \begin{align}  
 F= E \w \dd t + B 
 \end{align} 
 
-Wir bemerken, dass bei der äußeren Ableitung von $F$ die linken Seiten der Gleichungen (23) und (24) auftreten:
+Wir bemerken, dass bei der äußeren Ableitung von $F$ die linken Seiten der Gleichungen (23?) und (24?) auftreten:
 
 \begin{align}
 \dd F &= \dd E \w \dd t + \dd B \notag \\
@@ -89,20 +103,15 @@ Mit Hilfe dieses Potentials lassen sich die Felder wie folgt darstelllen:
 
 \begin{align}
 E &= -\partial_t A \\
-B &= \dd_s A
+B &= \dd_s A.
 \end{align}
 
-Betrachten wir nun noch die beiden inhomogenen Gleichungen (17) und (18), die jeweils noch Quellterme enthalten. Es fällt auf, dass $E$ und $B$ gewissermaßen ihre Rollen tauschen. Dieses Phänomen wird als \bfseries elektromagnetische Dualität \normalfont bezeichnet.
+Betrachten wir nun noch die beiden inhomogenen Gleichungen (17?) und (18?), die jeweils noch Quellterme enthalten. Es fällt auf, dass $E$ und $B$ gewissermaßen ihre Rollen tauschen. Dieses Phänomen wird als \bfseries elektromagnetische Dualität \normalfont bezeichnet.
 
 Auf Grundlage dieser Dualität, welche durch die Transformationen der Felder gemäß
 \begin{align*}
 E \rightarrow B \qquad \text{sowie} \qquad B \rightarrow -E
 \end{align*}
 
-die Invarianz der Maxwell-Gleichungen im Vakuum charakterisiert, wollen wir nun eine neue Methode einführen, genauer einen neuen Operator, der uns diese Transformationen ermöglicht. \\
-Wir erinnern uns an die neue Darstellung der Felder nach Gl. (21) und (22):
-\begin{align*}
-E &= E_x \dd x +E_y \dd y + E_z \dd z   \\
-B &= B_x \dd y \w \dd z + B_y \dd z \w \dd x + B_z \dd x \w \dd y 
-\end{align*}
-Für die Transformation müssen wir also eine 1-Form in eine 2-Form überführen und umgekehrt. Im $\mathbb{R}^3$ kann diese Transformation mit dem \bfseries Hodge-Stern-Operator \normalfont realisiert werden.
+die Invarianz der Maxwell-Gleichungen im Vakuum charakterisiert, wollen wir nun eine neue Methode einführen, die uns diese Transformationen ermöglicht. \\
+Es soll uns möglich sein eine 1-Form in eine 2-Form zu überführen und umgekehrt. Im $\mathbb{R}^3$ kann diese Transformation mit dem \bfseries Hodge-Stern-Operator \normalfont realisiert werden.
