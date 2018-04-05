@@ -1,49 +1,39 @@
 \subsection{inhomogene Maxwell-Gleichungen}
-Durch Anwenden des Hodge-Stern-Operators auf $F$ folgt:
+
+Bei den inhomogenen Maxwell-Gleichungen tauschen nicht nur die Rollen von $E$- und $B$-Feld, es treten zusätzlich Quellterme in Form der Ladungsdichte $\rho$ und der Stromdichte $\vec{j}$ auf. \\
+Um diese als Differentialformen zu betrachten, nutzen wir, dass die Metrik uns erlaubt Vektorfelder in 1-Formen umzuwandeln. Wir definieren also  
 
 \begin{align}
-\star F = \star_s E - \star_s B \w \dd t 
+j = j_1 \dd x^1 + j_2 \dd x^2 + j_3 \dd x^3. 
 \end{align}
 
-also entspricht die Dualität der Transformation 
-
-\begin{align*}
-B \rightarrow \star_s E \qquad \text{sowie} \qquad E \rightarrow - \star_s B
-\end{align*}
-
-In Komponentenschreibweise sehen wir, dass:
+Analog kann man das 4-Vektorfeld $j^{\mu}$ mit der Minkowski-Metrik in eine Differentialform umwandeln:
 
 \begin{align}
-(\star F)_{\mu \nu} =
-\begin{pmatrix}
-\phantom{-}0 & B_1 & B_2 & B_3 \\
--B_1 & \phantom{-}0 & \phantom{-}E_3 & -E_2 \\
--B_2 & -E_3 & \phantom{-}0 & \phantom{-}E_1 \\
--B_3 & \phantom{-}E_2 & -E_1 & \phantom{-}0
-\end{pmatrix}
+J = j - \rho \dd t. 
 \end{align}
 
-
+Nun können wir die inhomogenen Maxwell-Gleichungen in der Sprache der Differentialformen schreiben als:
 
 \begin{align}
-\dd \star F &= \star_s \partial_t E  \w \dd t + \dd_s \star_s E - \dd_s \star_s B \w \dd t \notag \\
-				&= \dd_s \star_s E + (\star_s \partial_t E - \dd_s \star_s B) \w \dd t 
+\star_s \dd_s \star_s E &= \rho \\
+\star_s \dd_s \star_s B - \partial_t E &= j
 \end{align}
 
-Vergleicht man dies mit den Maxwell-Gleichungen, fällt auf, dass:
+Diese beiden Gleichungen lassen sich wieder zu einer einzigen zusammenfassen, wenn man bemerkt, dass:
 
 \begin{align}
-\star \dd_s \star E &= \varrho \qquad\qquad,\varrho=\text{Ladungsdichte} \\
-\star \dd_s\star B - \partial_t E &= j \qquad\qquad ,j=j_x \dd x + j_y \dd y + j_z \dd z
+\star F &= \star_s E - \star_s B \w \dd t \\
+\dd \star F &= \star_s \partial_t E  \w \dd t + \dd_s \star_s E - \dd_s \star_s B \w \dd t \\
+\star \dd \star F &= - \partial_t E - \star_s \dd_s \star_s E \w \dd t + \star_s \dd_s \star_s B 		
 \end{align}
 
-Definiert man den Strom $J=j - \varrho \  \dd t$, lassen sich (17) und (18) in 
+Setzt man $\star \dd \star F = J$ und vergleicht Terme gleichen Grades erhält man das gewünschte Ergebnis: Gleichungen () und () in einer! Also lassen sich die inhomogenen Maxwell-Gleichungen in Differentialformen schreiben als $\star \dd \star F = J$ oder äquivalent durch nochmalige Anwendung des Hodge-Stern-Operators auf beiden Seiten:
 
 \begin{align}
-\dd \star F = \star J
+\dd \star F = \star J		
 \end{align}
 
-zusammenfassen. \\
 
 Insgesamt lässt sich also die gesamte Elektrodynamik auf die beiden gefundenen, äußerst eleganten Gleichungen zurückführen.
 
