@@ -8,7 +8,7 @@ g^{i j} := g(\sigma^{i},\sigma^{j}) = \pm \delta^{i j}.
 \end{align*}
 
 
-Der Hodge-Star-Operator ist abstrakt definiert als die Abbildung:
+Der Hodge-Stern-Operator ist abstrakt definiert als die Abbildung:
 \begin{align*}
 \star : \Lambda^p V \quad \rightarrow \quad  \Lambda^{n-p} V 
 \end{align*}
@@ -70,30 +70,33 @@ Alles zusammen führt zur der praktischen Definition des Operators als:
  \end{align}
 
 
-Für unsere Anwendung wählen wir als Vektorraum $V$ den Raum der 1-Formen $\Omega^1......$ $\Lambda^n V \rightarrow$
+Für unsere Anwendung wählen wir als Vektorraum $V$ den Raum der 1-Formen $\Omega^1(\mathcal{M})$ und ersetzen $\Lambda^n V \rightarrow \Omega^n(\mathcal{M})$. Die geordnete Orthonormalbasis ist nun also ${\dd x^1, ..., \dd x^n}$. \\
 
 
 
 Eine alternative Definition des Operators, mit der wir ebenfalls noch arbeiten wollen, lautet (nun angewandt auf Differentialformen):
+
 \begin{align}
 \omega \w \star \mu = \left<\omega,\mu \right>\text{vol} = g(\omega,\mu)\alpha \quad \forall \omega, \mu \in \Omega^p(\mathcal{M}), \alpha \in \Omega^n(\mathcal{M})
 \end{align}
+
 Dabei ist $\text{vol} = \sqrt{\abs{\text{det} \ g_{\mu\nu}}} \ \dd x^1 \w \dots \w \dd x^n$ die Volumen-Form und $g_{\mu\nu}$ die Metrik. \\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.3\linewidth]{figures/darstellung-hodge.pdf}
 	\caption{Grafische Darstellung der Funktion des Hodge-Stern-Operators}
 \end{figure}
-Beschränken wir den Operator auf den $\mathbb{R}^3$ verwenden wir nachfolgend die Notation $\star_s$.
-\subsubsection{Anwendungsbeispiel: 4D-Minkowski-Raumzeit}
 
-Wir betrachten den trivialen 4er-Vektor:
+Beschränken wir den Operator auf den Raum $\mathbb{R}^3$ mit dem Standardskalarprodukt verwenden wir nachfolgend die Notation $\star_s$.
+
+\subsubsection{Anwendungsbeispiel: 4D-Minkowski-Raumzeit}
+Wir betrachten die triviale 4-Form:
 
 \begin{align}
-\omega = - \dd t \w \dd x\w \dd y \w \dd z
+\omega = \dd t \w \dd x\w \dd y \w \dd z
 \end{align}
 
-Wenden wir nun den $\star$-Operator an, folgt zum Beispiel:
+Wenden wir nun den $\star$-Operator an, folgt zum Beispiel:  \todo{nochmal nachrechnen}
 
 \begin{itemize}
 \begin{align*}
@@ -106,6 +109,6 @@ Wenden wir nun den $\star$-Operator an, folgt zum Beispiel:
 \end{align*}
 \end{itemize}
 
-Wörtlich gesprochen liefert uns der Hodge-Stern-Operator die duale (n-p)-Form  zur p-Form durch "wedgen" der übrigen Basis-1-Formen, die nicht in der p-Form auftreten, unter Berücksichtigung der Geometrie des Raumes. \\
-Dies wollen wir nutzen, um nun die inhomogenen Maxwell-Gleichungen neu auszuformulieren.
+Wörtlich gesprochen liefert uns der Hodge-Stern-Operator die duale (n-p)-Form zur p-Form durch "wedgen" der übrigen Basis-1-Formen, die nicht in der p-Form auftreten, unter Berücksichtigung der Geometrie des Raumes. \\
+Dies wollen wir nutzen, um nun die inhomogenen Maxwell-Gleichungen neu zu formulieren.
 
