@@ -6,7 +6,7 @@ Wir werden diese mächtige Methode auf die Elektrodynamik anwenden und sie auf �
 In der klassischen Mechanik hatten wir es immer mit endlich vielen Freiheitsgraden zu tun. Bei der klassischen Feldtheorie stellen wir uns den Raum als gitterartig verbundene Raumpunkte vor, die jeweils mit ihren Nachbarn wechselwirken können. Im Kontinuumslimit haben wir unendlich viele Raumpunkte und benötigen eine neue Beschreibungsweise. \\
 An die Stelle der verallgemeinerten Koordinaten treten nun die \textbf{Felder} $\varphi^{(i)}$ und die Lagrangefunktion wird durch die \textbf{Lagrangedichte} \  $\text{L}=\iiint \dd[3]{x}  \lagr$ \ ersetzt. \\
 Das Wirkungsintegral ist nun $\mathcal{S}=\int_{t_1}^{t_2} \dd{t} \iiint \dd[3]{x}  \lagr = \int \dd[4]{x} \lagr$. \\
-Die Bewegungsgleichungen erhalten wir aus dem Hamiltonschen Prinzip und nehmen dazu an, dass die Variation der Felder auf den Hyperflächen $t=t_1$ und $t=t_2$ verschwindet:
+Die Bewegungsgleichungen erhalten wir aus dem Hamilton'schen Prinzip und nehmen dazu an, dass die Variation der Felder auf den Hyperflächen $t=t_1$ und $t=t_2$ verschwindet:
 \begin{align*}
 0 = \delta \mathcal{S} &= \int \dd[4]{x} \left( \dphi \delta\varphi^{(i)} + \ddphi \delta(\partial_{\mu}\varphi^{(i)}) \right) \\
  				 &= \int \dd[4]{x} \left(\dphi - \partial_{\mu} \ddphi \right) \delta\varphi^{(i)}
@@ -41,7 +41,7 @@ Es folgt also:
 \end{align}
 \end{mybox}
 \phantom{.} \\
-Die Lagrangedichte hat demnach die richtige Dimension $\left[\sfrac{\text{Energie}}{\text{Volumen}}\right]$ wobei der erste Term einer "kinetischen Energie" und der Zweite einer "potentiellen Energie" entspricht. \\
+Die Lagrangedichte hat demnach die richtige Dimension $\left[\sfrac{\text{Energie}}{\text{Volumen}}\right]$,wobei der erste Term einer "kinetischen Energie" und der Zweite einer "potentiellen Energie" entspricht. \\
 
 Andererseits kann man die Lagrangedichte auch ohne Kenntnis der Maxwell-Gleichungen herleiten. \\
 Wir wissen, dass die Elektrodynamik eine relativistische Theorie ist und die Bewegungsgleichungen daher invariant unter Lorentz-Transformationen sein sollten. Außerdem gilt in erster Ordnung das Superpositionsprinzip, d.h. Summen von Lösungen der Bewegungsgleichungen sind wieder Lösungen. Deshalb sollten die Bewegungsgleichungen linear sein, der Lagrangian also höchstens quadratisch in den Ableitungen der Feldkomponenten sein. Es könnten auch Terme höherer Ordnung auftreten, diese wären aber nur kleine Störterme, die die Bewegungsgleichungen nur unwesentlich beeinflussen. \\ 
@@ -65,8 +65,8 @@ Da $\fd$ spurfrei ist, sind die ersten möglichen eichinvarianten Skalare:
 \left( \star \fd \right) \fu &= 4 \vec{B} \cdot \vec{E}
 \end{align}
 
-Betrachtet man diese beiden Skalare ausführlicher, fällt auf, dass der Zweite sein Vorzeichen unter Raumspiegelung ändert. Solche paritätsverletzenden Effekte wurden bisher nicht beobachtet, weshalb dieser als Kandidat rausfällt. Außerdem lässt er sich sowieso als Divergenz schreiben und trägt damit bei der Variation nicht bei. Da wir höchstens quadratische Abhängigkeiten in den Ableitungen zulassen wollen, haben wir diese mit $\fd \fu$ gefunden. Mehr Kombinationen, sodass es eichinvariant bleibt, gibt es nicht. Betrachten wir also noch die reinen Feldanteile: \\
+Betrachtet man diese beiden Skalare ausführlicher, fällt auf, dass der Zweite sein Vorzeichen unter Raumspiegelung ändert. Solche paritätsverletzenden Effekte wurden bisher nicht beobachtet, weshalb dieser als Kandidat rausfällt. Außerdem lässt er sich sowieso als Divergenz schreiben und liefert demnach keinen Beitrag bei der Variation. Da wir höchstens quadratische Abhängigkeiten in den Ableitungen zulassen wollen, haben wir diese mit $\fd \fu$ gefunden. Mehr Kombinationen, sodass es eichinvariant bleibt, gibt es nicht. Betrachten wir also noch die reinen Feldanteile: \\
 
-Am einfachsten wäre $A_{\mu} A^{\mu}$. Dies entspricht aber einem Massenterm, der dazu führen würde, dass die Felder schneller als $\frac{1}{r}$ abfallen würden und ist darüberhinaus nicht eichinvariant. Deshalb bleibt noch der Lorentz-Skalar $j_{\mu} A^{\mu}$, der mit der Kontinuitätsgleichung $\partial_{\mu} j^{\mu} = 0$ eichinvariant ist. Da es die Symmetrie der Natur verletzen würde, dürfen die Raumzeitkoordinten $x^{\mu}$ nicht explizit vorkommen. \\
+Am einfachsten wäre $A_{\mu} A^{\mu}$. Dies entspricht aber einem Massenterm, der dazu führen würde, dass die Felder schneller als $\frac{1}{r}$ abfallen würden und ist darüber hinaus nicht eichinvariant. Deshalb bleibt noch der Lorentz-Skalar $j_{\mu} A^{\mu}$, der mit der Kontinuitätsgleichung $\partial_{\mu} j^{\mu} = 0$ eichinvariant ist. Da es die Symmetrie der Natur verletzen würde, dürfen die Raumzeitkoordinten $x^{\mu}$ nicht explizit vorkommen. \\
 
 Die drei Forderungen fixieren die Lagrangedichte demnach auf $\lagr = a \cdot \fd \fu + b \cdot j_{\mu} A^{\mu}$. Der Faktor $a$ bestimmt die Normierung des $A$-Feldes und wird üblicherweise zu $a = - 1/4$ festgelegt. Das negative Vorzeichen rührt daher, dass der 'kinetische Anteil' mit den Zeitableitungen positiv wird, wie es bei der klassischen Lagrangefunktion üblich ist.
