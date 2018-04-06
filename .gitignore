@@ -31,7 +31,7 @@
 *-blx.aux
 *-blx.bib
 *.run.xml
-*.bib.tex.swp
+.bib.tex.swp
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
