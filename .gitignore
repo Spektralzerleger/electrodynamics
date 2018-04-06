@@ -31,6 +31,7 @@
 *-blx.aux
 *-blx.bib
 *.run.xml
+*.bib.tex.swp
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
@@ -232,3 +233,5 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
+#DS_Store
+*.DS_Store
