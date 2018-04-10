@@ -16,8 +16,8 @@ Zunächst einmal bemerken wir, dass sich die äußere Ableitung einer 1-Form in 
 \dd \omega &= \partial_0 \omega_I \dd x^0 \w \dd x^{I} + \partial_i \omega_I \dd x^i \w \dd x^{I} \notag\\
 &= \dd t \w \partial_t \omega + \dd_s \omega 
 \end{align}
-wobei $\dd_s$ die auf den Raumanteil eingeschränkte äußere Ableitung ist und $I$ ein Multi-Index. \\
-Betrachtet man die homogenen Maxwell-Gleichungen und die Eigenschaften der äußeren Ableitung, fällt auf, dass es sinnvoll erscheint, das E-Feld als 1-Form sowie das B-Feld als 2-Form zu schreiben:
+wobei $\dd_s$ die auf den Raumanteil eingeschränkte äußere Ableitung ist und $I$ ein Multi-Index. Diese Aufteilung lässt sich auch verallgemeinern.\\
+Betrachtet man die homogenen Maxwell-Gleichungen und die Eigenschaften der äußeren Ableitung, erscheint es sinnvoll, das E-Feld als 1-Form sowie das B-Feld als 2-Form zu schreiben:
 \begin{align}
 E &= E_x \dd x +E_y \dd y + E_z \dd z   \\
 B &= B_x \dd y \w \dd z + B_y \dd z \w \dd x + B_z \dd x \w \dd y 
@@ -54,7 +54,7 @@ F= E \w \dd t + B
 Wir bemerken, dass bei der äußeren Ableitung von $F$ die linken Seiten der Gleichungen (24) und (25) auftreten:
 \begin{align}
 \dd F &= \dd E \w \dd t + \dd B \notag \\
-		&= (\dd_s E + \dd t \w \partial_t E ) \w \dd t + \dd_s B + \dd t \w \partial_t B \notag \\
+		&= (\dd_s E + \dd t \w \partial_t E ) \w \dd t + (\dd_s B + \dd t \w \partial_t B) \notag \\
 		&= (\dd_s E + \partial_t B) \w \dd t + \dd_s B
 \end{align}
 
@@ -64,7 +64,7 @@ Da $\dd F$ nur dann Null ist, wenn die beiden Summanden unabhängig Null sind, l
 \end{align}
 zusammenfassen. \\
 Da die äußere Ableitung koordinatenunabhängig ist, gilt $\dd F = 0$ auf jeder beliebigen Mannigfaltigkeit und hängt nicht von der Wahl der Koordinaten ab. \\
-Die 2-Form $F$ ist demnach geschlossen und besitzt nach dem \bfseries Poincaré-Lemma \normalfont ein Potential:
+Die 2-Form $F$ ist demnach geschlossen und besitzt nach dem \bfseries Poincaré-Lemma \normalfont im Minkowski-Raum ein Potential:
 \begin{align}
 F = \dd A 
 \end{align}
@@ -72,14 +72,14 @@ wobei A eine 1-Form ist. \\
 Damit gilt automatisch $ \dd F = \dd (\dd A) = 0$. Außerdem sehen wir, dass wir eine Eichfreiheit haben:
 \begin{align}
 A \quad \rightarrow \quad A + \dd \lambda \qquad\qquad \lambda \in C^{\infty}(\mathbb{R}^4)
-\end{align}.
+\end{align}
 Mit Hilfe dieses Potentials lassen sich die Felder wie folgt darstelllen:
 \begin{align}
 E &= -\partial_t A \\
 B &= \dd_s A.
 \end{align}
 
-Betrachten wir nun noch die beiden inhomogenen Gleichungen (17?) und (18?), die jeweils noch Quellterme enthalten. Es fällt auf, dass $E$ und $B$ gewissermaßen ihre Rollen tauschen. Dieses Phänomen wird als \bfseries elektromagnetische Dualität \normalfont bezeichnet.
+Betrachten wir nun noch die beiden inhomogenen Gleichungen (17) und (18), die jeweils noch Quellterme enthalten. Es fällt auf, dass $E$ und $B$ gewissermaßen ihre Rollen tauschen. Dieses Phänomen wird als \bfseries elektromagnetische Dualität \normalfont bezeichnet.
 
 Auf Grundlage dieser Dualität, welche durch die Transformationen der Felder gemäß
 \begin{align*}

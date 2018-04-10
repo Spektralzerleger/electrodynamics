@@ -10,28 +10,28 @@ Dies lässt sich wieder als Divergenz auffassen und hat deshalb keinen Einfluss 
 \text{Ladungserhaltung} \qquad \longleftrightarrow \qquad \text{Eichinvarianz}
 \end{align*}
 \\
-Besonders interessant sind Translationen $x \rightarrow x + \varepsilon \cdot a$: 
+Besonders interessant sind Translationen $x \rightarrow x + \varepsilon \cdot a$. Diese ändern die Felder $\varphi^{(i)}$ wie folgt:
 \begin{align*}
-\varphi^{(i)}(x + \varepsilon \cdot a) &= \varphi^{(i)}(x) + \overbrace{\varepsilon\cdot a^{\mu}\partial_{\mu}\varphi^{(i)}(x)}^{\delta\varphi^{(i)}} \\
-\partial_{\mu}\varphi^{(i)}(x + \varepsilon \cdot a) &= \partial_{\mu}\varphi^{(i)}(x) + \underbrace{\varepsilon\cdot\left(a^{\nu}\partial_{\nu}\partial_{\mu}\varphi^{(i)}(x) + \partial_{\mu}a^{\nu}\partial_{\nu}\varphi^{(i)}(x)\right)}_{\delta(\partial_{\mu}\varphi^{(i)})} 
+\varphi^{(i)}(x + \varepsilon \cdot a) &= \varphi^{(i)}(x) + \overbrace{\varepsilon\cdot a^{\mu}\partial_{\mu}\varphi^{(i)}(x)}^{= \delta\varphi^{(i)}} \\
+\partial_{\mu}\varphi^{(i)}(x + \varepsilon \cdot a) &= \partial_{\mu}\varphi^{(i)}(x) + \underbrace{\varepsilon\cdot\left(a^{\nu}\partial_{\nu}\partial_{\mu}\varphi^{(i)}(x) + \partial_{\mu}a^{\nu}\partial_{\nu}\varphi^{(i)}(x)\right)}_{ = \delta(\partial_{\mu}\varphi^{(i)})} 
 \end{align*}
 Es wurde hierbei angenommen, dass die Ortsabhängigkeit nur in den Feldern steckt. \\
-Wir erhalten:
+Wir erhalten für die Variation der neuen Wirkung :
 \begin{align*}
-\delta \mathcal{S} &= \int \dd[4]{x} \left( \dphi \ \varepsilon\cdot a^{\mu}\partial_{\mu}\varphi^{(i)} + \ddphi \ \varepsilon\cdot\left(a^{\nu}\partial_{\nu}\partial_{\mu}\varphi^{(i)}+\partial_{\mu}a^{\nu}\partial_{\nu}\varphi^{(i)}\right) \right) \\
+0 = \delta \mathcal{S} &= \int \dd[4]{x} \left( \dphi \ \varepsilon\cdot a^{\mu}\partial_{\mu}\varphi^{(i)} + \ddphi \ \varepsilon\cdot\left(a^{\nu}\partial_{\nu}\partial_{\mu}\varphi^{(i)}+\partial_{\mu}a^{\nu}\partial_{\nu}\varphi^{(i)}\right) \right) \\
 &= \int \dd[4]{x} \left( \partial_{\nu}\lagr - \partial_{\mu} \left[\ddphi \partial_{\nu}\varphi^{(i)}\right] \right) \varepsilon\cdot a^{\nu}
 \end{align*}
-Damit erhalten wir:
+Damit erhalten wir eine neue Erhaltungsgröße:
 \begin{mybox}{Energie-Impuls-Tensor}
 \begin{align}
 \partial_{\mu}\underbrace{\left[ \ddphi \partial^{\nu}\varphi^{(i)} - g^{\mu \nu}\lagr \right]}_{ = \eitens} = 0
 \end{align}
 \end{mybox}
 \newpage
-Für das elektromagnetische Feld $\lagr = -\frac{1}{4} \fd \fu - j_{\mu}A^{\mu}$ folgt:
+Für den Lagrangian des elektromagnetischen Feldes $\lagr = -\frac{1}{4} \fd \fu - j_{\mu}A^{\mu}$ folgt:
 
 \begin{align}
-\eitens = - \fu j^{\nu}A_{\sigma}+g^{\mu\nu}\left( \frac{1}{4} F_{\sigma\tau}F^{\sigma\tau}+j_{\mu}A^{\mu}\right)
+\eitens = - F^{\mu\sigma}j^{\nu}A_{\sigma}+g^{\mu\nu}\left( \frac{1}{4} F_{\sigma\tau}F^{\sigma\tau}+j_{\mu}A^{\mu}\right)
 \end{align}
 
 In dieser Fom ist der Energie-Impuls-Tensor aber nicht eichinvariant, denn unter der Transformation $A^{\mu} \ \rightarrow \ A^{\mu} + \partial^{\mu}\phi$ folgt:
@@ -40,15 +40,15 @@ In dieser Fom ist der Energie-Impuls-Tensor aber nicht eichinvariant, denn unter
 \end{align}
 
 Wir wollen einen Ausdruck für $\eitens$ finden, der eichinvariant und symmetrisch ist. \\
-Dazu bemerken wir, dass zur Lagrangedichte eine Divergenz addiert werden kann ohne die Bewegungsgleichungen zu ändern. Also hat der Energie-Impuls-Tensor eine gewisse Beliebigkeit, die wir ausnutzen können. \\
-Der Energiestrom bleibt unverändert unter einer Transformation $\eitens \ \rightarrow \ \eitens+ \grad{\eitens}$ mit: 
+Dazu bemerken wir, dass zur Lagrangedichte eine Divergenz addiert werden kann, ohne die Bewegungsgleichungen zu ändern. Also hat der Energie-Impuls-Tensor eine gewisse Beliebigkeit, die wir ausnutzen können. \\
+Der Energiestrom bleibt unverändert unter einer Transformation $\eitens \ \rightarrow \ \eitens+ \Delta\eitens$ mit: 
 
 \begin{enumerate}
-\item[(i)] $\partial_{\mu}\grad{\eitens}=0$ \qquad (erfüllt Erhaltungssatz)
-\item[(ii)] $ \int \dd[3]{x} \grad{T^{00}}$ \qquad \ (trägt nicht zur Gesamtenergie bei)
+\item[(i)] $\partial_{\mu}\Delta\eitens=0$ \qquad (erfüllt Erhaltungssatz)
+\item[(ii)] $ \int \dd[3]{x} \Delta T^{00} =0$ \qquad \ (trägt nicht zur Gesamtenergie bei)
 \end{enumerate}
 
-Obiger Zusatzterm nach der Eichung motiviert $\grad{\eitens}=\partial_{\sigma}(F^{\mu\sigma}A^{\nu})$ und erfüllt die Bedingungen. \\
+Obiger Zusatzterm nach der Eichung motiviert $\Delta\eitens=\partial_{\sigma}(F^{\mu\sigma}A^{\nu})$ und erfüllt die Bedingungen. \\
 Setzen wir also:
 \begin{align}
 \eitens = -F^{\mu\sigma}\partial^{\nu}A_{\sigma} + g^{\mu\nu}\left( \frac{1}{4}F_{\sigma\tau}F^{\sigma\tau} + j_{\tau}A^{\tau} \right) + \partial_{\sigma} \left(F^{\mu\sigma}A^{\nu} \right)
@@ -61,6 +61,6 @@ und schreiben mit der Maxwell-Gleichung $\partial_{\sigma}F^{\mu\sigma}=-j^{\mu}
 \end{align}
 
 Damit gilt $\partial_{\mu}\eitens = A_{\varrho}\partial^{\nu}j^{\varrho}$. \\
-Für den rein elektromagnetischen Anteil $\eitens_0 = \fu F_{\sigma}^{\phantom{\sigma}\nu} + \frac{1}{4}g^{\mu\nu}F_{\sigma\tau}F^{\sigma\tau}$ folgt dann: $\partial_{\mu}\eitens_0=j_{\varrho}F^{\varrho\nu}$. \\
+Für den rein elektromagnetischen Anteil $\eitens_0 = \fu F_{\sigma}^{\phantom{\sigma}\nu} + \frac{1}{4}g^{\mu\nu}F_{\sigma\tau}F^{\sigma\tau}$ folgt dann: \\ $\partial_{\mu}\eitens_0=j_{\varrho}F^{\varrho\nu}$. \\
 \vspace{1pt} \\
 In Abwesenheit von äußeren Quellen ist der Energie-Impuls-Tensor \textbf{eichinvariant}, \textbf{erhalten}, \textbf{symmetrisch} und \textbf{spurfrei}.
