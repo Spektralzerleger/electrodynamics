@@ -1,4 +1,4 @@
-# seminar-electrodynamics
+# Seminar talk on theoretical electrodynamics
 
 This repository contains all the work related to the preparation of a talk/short lecture about "Lagrangrian formulation and electrodynamics via differential forms" me and my partner created for the bachelor mandatory seminar on "theoretical electrodynamics" organized by Prof. Weigand at the Institute for Theoretical Physics, Heidelberg University in april 2018.
 
